@@ -70,6 +70,54 @@ class GameModelTest {
     }
 
     @Test
+    void bonusBrickAwardsItsHigherScoreOnlyOnce() {
+        GameModel game = new GameModel();
+        game.startNewGame();
+        Brick brick = new Brick(10, 20, 70, 28, BrickType.BONUS);
+
+        assertTrue(game.hitBrick(brick));
+        assertFalse(game.hitBrick(brick));
+
+        assertEquals(50, game.getScore());
+    }
+
+    @Test
+    void scoreUpgradeIncreasesPointsForDestroyedBricks() {
+        GameModel game = new GameModel();
+        game.startNewGame();
+        game.multiplyBrickScore(1.5);
+
+        game.hitBrick(new Brick(1, 40));
+
+        assertEquals(60, game.getScore());
+        assertEquals(1.5, game.getBrickScoreMultiplier());
+    }
+
+    @Test
+    void newRunResetsBrickScoreMultiplier() {
+        GameModel game = new GameModel();
+        game.startNewGame();
+        game.multiplyBrickScore(1.5);
+
+        game.startNewGame();
+
+        assertEquals(1.0, game.getBrickScoreMultiplier());
+    }
+
+    @Test
+    void specialBrickGrantsOneLifeWhenItBreaks() {
+        GameModel game = new GameModel();
+        game.startNewGame();
+        Brick brick = new Brick(10, 20, 70, 28, BrickType.SPECIAL);
+
+        game.hitBrick(brick);
+        game.hitBrick(brick);
+
+        assertEquals(4, game.getLives());
+        assertEquals(30, game.getScore());
+    }
+
+    @Test
     void pausesForAnUpgradeAfterAStageIsCleared() {
         GameModel game = new GameModel();
         game.startNewGame();

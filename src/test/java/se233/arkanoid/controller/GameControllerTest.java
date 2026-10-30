@@ -6,6 +6,8 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import se233.arkanoid.model.Ball;
 import se233.arkanoid.model.Brick;
+import se233.arkanoid.model.BrickType;
+import se233.arkanoid.model.Boss;
 import se233.arkanoid.model.GameModel;
 import se233.arkanoid.model.GameState;
 import se233.arkanoid.model.Paddle;
@@ -23,6 +25,7 @@ import java.util.function.Consumer;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -47,7 +50,7 @@ class GameControllerTest {
 
         assertEquals(GameState.PLAYING, harness.controller.getGame().getState());
         assertEquals(3, harness.controller.getGame().getLives());
-        assertEquals(24, harness.display.stage.getBricks().size());
+        assertEquals(26, harness.display.stage.getBricks().size());
     }
 
     @Test
@@ -62,6 +65,20 @@ class GameControllerTest {
         assertEquals(320, harness.display.ball.getX(), 0.0001);
         assertEquals(610, harness.display.ball.getY(), 0.0001);
         assertEquals(1, harness.display.stageNumber);
+    }
+
+    @Test
+    void startBossTestGameStartsAtStageFiveWithFullHealthBoss() {
+        Harness harness = new Harness(new Random(1));
+
+        harness.controller.startBossTestGame();
+
+        assertEquals(GameState.PLAYING, harness.controller.getGame().getState());
+        assertEquals(5, harness.display.stageNumber);
+        assertNotNull(harness.display.boss);
+        assertEquals(Boss.DEFAULT_HEALTH, harness.display.boss.getHealth());
+        assertNotNull(harness.display.ball);
+        assertNotNull(harness.display.paddle);
     }
 
     @Test
@@ -312,20 +329,31 @@ class GameControllerTest {
 
     @Test
     @Order(22)
-    void completeCurrentStageWinsAfterTheFinalStage() {
+    void defeatingBossAdvancesToTheNextRegularStage() {
         Harness harness = new Harness(new Random(1));
         harness.controller.startNewGame();
-        for (int stage = 0; stage < 2; stage++) {
+        for (int stage = 0; stage < 4; stage++) {
             clearCurrentStage(harness);
             harness.controller.update(0);
             harness.display.selectUpgrade(0);
         }
-        clearCurrentStage(harness);
 
-        harness.controller.update(0);
+        assertEquals(5, harness.display.stageNumber);
+        assertNotNull(harness.display.boss);
+        for (int hit = 0; hit < Boss.DEFAULT_HEALTH; hit++) {
+            hitBoss(harness);
+            if (hit < Boss.DEFAULT_HEALTH - 1) {
+                for (int frame = 0; frame < 7; frame++) harness.controller.update(0.05);
+            }
+        }
 
-        assertEquals(GameState.VICTORY, harness.controller.getGame().getState());
-        assertEquals("YOU WIN", harness.display.endTitle);
+        assertEquals(GameState.UPGRADE, harness.controller.getGame().getState());
+        assertNull(harness.display.boss);
+        harness.display.selectUpgrade(0);
+        assertEquals(GameState.PLAYING, harness.controller.getGame().getState());
+        assertEquals(6, harness.display.stageNumber);
+        assertNull(harness.display.boss);
+        assertFalse(harness.display.stage.isCleared());
     }
 
     @Test
@@ -364,6 +392,45 @@ class GameControllerTest {
     }
 
     @Test
+    void extraBallUpgradeSpawnsAndRendersAnotherBall() {
+        Upgrade extraBall = upgrade("Extra ball", GameModel::addExtraBall);
+        Harness harness = new Harness(new UpgradeManager(List.of(extraBall,
+                upgrade("Choice B", game -> {}), upgrade("Choice C", game -> {})), new Random(1)));
+        harness.controller.startNewGame();
+        clearCurrentStage(harness);
+        harness.controller.update(0);
+
+        harness.display.choose(extraBall);
+
+        assertEquals(1, harness.controller.getGame().getExtraBallCount());
+        assertEquals(1, harness.display.extraBalls.size());
+    }
+
+    @Test
+    void bossAppearsAgainAtStageTen() {
+        Harness harness = new Harness(new Random(1));
+        harness.controller.startNewGame();
+        for (int stage = 1; stage < 10; stage++) {
+            if (stage % 5 == 0) {
+                for (int hit = 0; hit < Boss.DEFAULT_HEALTH; hit++) {
+                    hitBoss(harness);
+                    if (hit < Boss.DEFAULT_HEALTH - 1) {
+                        for (int frame = 0; frame < 7; frame++) harness.controller.update(0.05);
+                    }
+                }
+            } else {
+                clearCurrentStage(harness);
+                harness.controller.update(0);
+            }
+            harness.display.selectUpgrade(0);
+        }
+
+        assertEquals(10, harness.display.stageNumber);
+        assertNotNull(harness.display.boss);
+        assertEquals(Boss.DEFAULT_HEALTH, harness.display.boss.getHealth());
+    }
+
+    @Test
     @Order(25)
     void selectUpgradeRoutesFailuresThroughTheCentralExceptionHandler() {
         Upgrade brokenUpgrade = upgrade("Broken", game -> {
@@ -379,6 +446,18 @@ class GameControllerTest {
 
         assertNotNull(harness.display.errorDetail);
         assertEquals(1, harness.logger.errors.size());
+    }
+
+    @Test
+    void updateRoutesUnexpectedRuntimeFailuresThroughTheCentralExceptionHandler() {
+        Harness harness = new Harness(new Random(1));
+        harness.controller.startNewGame();
+
+        harness.controller.update(Double.NaN);
+
+        assertNotNull(harness.display.errorDetail);
+        assertEquals(1, harness.logger.errors.size());
+        assertTrue(harness.logger.errors.get(0).contains("error occurred"));
     }
 
     @Test
@@ -433,7 +512,7 @@ class GameControllerTest {
         harness.display.selectUpgrade(0);
 
         assertEquals(2, harness.display.stageNumber);
-        assertEquals(32, harness.display.stage.getBricks().size());
+        assertEquals(40, harness.display.stage.getBricks().size());
         assertEquals(expectedLives, harness.display.lives);
     }
 
@@ -467,20 +546,30 @@ class GameControllerTest {
 
     @Test
     @Order(32)
-    void createStagesBuildsThreeProgressivelyHarderStages() {
+    void createStagesBuildsFourProgressivelyHarderStagesBeforeTheBoss() {
         Harness harness = new Harness(new Random(1));
         harness.controller.startNewGame();
-        assertEquals(24, harness.display.stage.getBricks().size());
-        assertEquals(1, harness.display.stage.getBricks().get(0).getHitPoints());
+        assertEquals(26, harness.display.stage.getBricks().size());
+        assertTrue(harness.display.stage.getBricks().stream().anyMatch(brick -> brick.getType() == BrickType.NORMAL));
+        assertTrue(harness.display.stage.getBricks().stream().anyMatch(brick -> brick.getType() == BrickType.BONUS));
 
-        for (int stage = 0; stage < 2; stage++) {
+        for (int stage = 0; stage < 3; stage++) {
             clearCurrentStage(harness);
             harness.controller.update(0);
             harness.display.selectUpgrade(0);
         }
 
-        assertEquals(32, harness.display.stage.getBricks().size());
-        assertEquals(2, harness.display.stage.getBricks().get(0).getHitPoints());
+        assertEquals(4, harness.display.stageNumber);
+        assertEquals(42, harness.display.stage.getBricks().size());
+        assertTrue(harness.display.stage.getBricks().stream().anyMatch(brick -> brick.getType() == BrickType.STRONG));
+
+        clearCurrentStage(harness);
+        harness.controller.update(0);
+        harness.display.selectUpgrade(0);
+
+        assertEquals(5, harness.display.stageNumber);
+        assertNotNull(harness.display.boss);
+        assertEquals(Boss.DEFAULT_HEALTH, harness.display.boss.getHealth());
     }
 
     @Test
@@ -493,8 +582,10 @@ class GameControllerTest {
         harness.display.selectUpgrade(0);
 
         assertEquals(2, harness.display.stageNumber);
-        assertEquals(32, harness.display.stage.getBricks().size());
-        assertEquals(1, harness.display.stage.getBricks().get(0).getHitPoints());
+        assertEquals(40, harness.display.stage.getBricks().size());
+        assertEquals(2, harness.display.stage.getBricks().get(0).getHitPoints());
+        assertTrue(harness.display.stage.getBricks().stream().anyMatch(brick -> brick.getType() == BrickType.STRONG));
+        assertTrue(harness.display.stage.getBricks().stream().anyMatch(brick -> brick.getType() == BrickType.SPECIAL));
     }
 
     @Test
@@ -517,14 +608,24 @@ class GameControllerTest {
         harness.controller.startNewGame();
 
         assertEquals(65, harness.display.stage.getBricks().get(0).getY(), 0.0001);
-        assertEquals(97, harness.display.stage.getBricks().get(8).getY(), 0.0001);
-        assertEquals(129, harness.display.stage.getBricks().get(16).getY(), 0.0001);
+        assertTrue(harness.display.stage.getBricks().stream().anyMatch(brick -> brick.getY() == 97));
+        assertTrue(harness.display.stage.getBricks().stream().anyMatch(brick -> brick.getY() == 129));
+        assertTrue(harness.display.stage.getBricks().stream().anyMatch(brick -> brick.getY() == 161));
+        assertTrue(harness.display.stage.getBricks().stream().anyMatch(brick -> brick.getY() == 193));
     }
 
     private static void clearCurrentStage(Harness harness) {
         for (Brick brick : harness.display.stage.getBricks()) {
             while (!brick.isDestroyed()) harness.controller.getGame().hitBrick(brick);
         }
+    }
+
+    private static void hitBoss(Harness harness) {
+        Boss boss = harness.display.boss;
+        if (harness.display.ball.getVelocityY() > 0) harness.display.ball.bounceVertical();
+        harness.display.ball.setPosition(boss.getX() + boss.getWidth() / 2,
+                boss.getY() + boss.getHeight() + 8);
+        harness.controller.update(0.05);
     }
 
     private static Upgrade upgrade(String name, Consumer<GameModel> effect) {
@@ -552,9 +653,11 @@ class GameControllerTest {
         private Runnable restartAction;
         private Consumer<Upgrade> upgradeAction;
         private List<Upgrade> upgradeChoices = List.of();
+        private List<Ball> extraBalls = List.of();
         private Ball ball;
         private Paddle paddle;
         private Stage stage;
+        private Boss boss;
         private int score;
         private int lives;
         private int stageNumber;
@@ -565,15 +668,19 @@ class GameControllerTest {
         @Override public void showMenu(Runnable action) { startAction = action; }
 
         @Override
-        public void render(Ball ball, Paddle paddle, Stage stage, int score, int lives, int stageNumber) {
+        public void render(Ball ball, Paddle paddle, Stage stage, Boss boss,
+                           int score, int lives, int stageNumber) {
             this.ball = ball;
             this.paddle = paddle;
             this.stage = stage;
+            this.boss = boss;
             this.score = score;
             this.lives = lives;
             this.stageNumber = stageNumber;
             renderCount++;
         }
+
+        @Override public void renderExtraBalls(List<Ball> balls) { extraBalls = List.copyOf(balls); }
 
         @Override public void showUpgradeChoices(List<Upgrade> choices, Consumer<Upgrade> onSelect) {
             upgradeChoices = choices;

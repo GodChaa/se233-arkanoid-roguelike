@@ -9,6 +9,8 @@ public class GameModel {
     private int paddleWidthBonus;
     private double paddleSpeedBonus;
     private double ballSpeedMultiplier = 1.0;
+    private double brickScoreMultiplier = 1.0;
+    private int extraBallCount;
     private boolean piercingBallActive;
 
     public void startNewGame() {
@@ -17,6 +19,8 @@ public class GameModel {
         paddleWidthBonus = 0;
         paddleSpeedBonus = 0;
         ballSpeedMultiplier = 1.0;
+        brickScoreMultiplier = 1.0;
+        extraBallCount = 0;
         piercingBallActive = false;
         state = GameState.PLAYING;
     }
@@ -36,7 +40,8 @@ public class GameModel {
         }
         boolean destroyed = brick.hit();
         if (destroyed) {
-            addScore(brick.getScoreValue());
+            addScore((int) Math.round(brick.getScoreValue() * brickScoreMultiplier));
+            if (brick.getType() == BrickType.SPECIAL) addLife();
         }
         return destroyed;
     }
@@ -75,6 +80,20 @@ public class GameModel {
             throw new IllegalArgumentException("Ball speed multiplier must be positive and finite.");
         }
         ballSpeedMultiplier *= multiplier;
+    }
+
+    public void multiplyBrickScore(double multiplier) {
+        if (!Double.isFinite(multiplier) || multiplier <= 0) {
+            throw new IllegalArgumentException("Score multiplier must be positive and finite.");
+        }
+        brickScoreMultiplier *= multiplier;
+    }
+
+    public void addExtraBall() {
+        if (state != GameState.PLAYING && state != GameState.UPGRADE) {
+            throw new IllegalStateException("An extra ball can only be added during a run.");
+        }
+        extraBallCount = Math.addExact(extraBallCount, 1);
     }
 
     public void activatePiercingBall() {
@@ -122,6 +141,8 @@ public class GameModel {
     public int getPaddleWidthBonus() { return paddleWidthBonus; }
     public double getPaddleSpeedBonus() { return paddleSpeedBonus; }
     public double getBallSpeedMultiplier() { return ballSpeedMultiplier; }
+    public double getBrickScoreMultiplier() { return brickScoreMultiplier; }
+    public int getExtraBallCount() { return extraBallCount; }
     public boolean isPiercingBallActive() { return piercingBallActive; }
 
     private void requireState(GameState expected, String message) {

@@ -12,6 +12,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import se233.arkanoid.model.Ball;
+import se233.arkanoid.model.Boss;
 import se233.arkanoid.model.Brick;
 import se233.arkanoid.model.Paddle;
 import se233.arkanoid.model.Stage;
@@ -69,6 +70,7 @@ public class GameView implements GameDisplay {
             Ball ball,
             Paddle paddle,
             Stage stage,
+            Boss boss,
             int score,
             int lives,
             int stageNumber
@@ -78,7 +80,6 @@ public class GameView implements GameDisplay {
 
         if (stage != null) {
             long now = System.nanoTime();
-
             if (stage != animatedStage) {
                 animatedStage = stage;
                 previousHitPoints.clear();
@@ -86,31 +87,19 @@ public class GameView implements GameDisplay {
             }
 
             List<Brick> bricks = stage.getBricks();
-
             for (Brick brick : bricks) {
                 int currentHitPoints = brick.getHitPoints();
-                Integer oldHitPoints =
-                        previousHitPoints.put(brick, currentHitPoints);
-
-                if (oldHitPoints != null
-                        && currentHitPoints < oldHitPoints) {
-                    brickAnimations.put(
-                            brick,
-                            new Animation(now, brick.isDestroyed())
-                    );
+                Integer oldHitPoints = previousHitPoints.put(brick, currentHitPoints);
+                if (oldHitPoints != null && currentHitPoints < oldHitPoints) {
+                    brickAnimations.put(brick, new Animation(now, brick.isDestroyed()));
                 }
             }
 
-            for (int brickIndex = 0;
-                 brickIndex < bricks.size();
-                 brickIndex++) {
-
+            for (int brickIndex = 0; brickIndex < bricks.size(); brickIndex++) {
                 Brick brick = bricks.get(brickIndex);
                 Animation animation = brickAnimations.get(brick);
-
                 if (brick.isDestroyed()) {
-                    if (animation != null
-                            && !animation.isFinished(now)) {
+                    if (animation != null && !animation.isFinished(now)) {
                         animation.draw(graphics, brick, now);
                     } else {
                         brickAnimations.remove(brick);
@@ -119,7 +108,6 @@ public class GameView implements GameDisplay {
                 }
 
                 drawBrick(graphics, brick, brickIndex);
-
                 if (animation != null) {
                     if (animation.isFinished(now)) {
                         brickAnimations.remove(brick);
@@ -134,6 +122,37 @@ public class GameView implements GameDisplay {
             brickAnimations.clear();
         }
 
+        if (boss != null && !boss.isDefeated()) {
+            graphics.setFill(Color.MEDIUMPURPLE);
+            graphics.fillRoundRect(
+                    boss.getX(), boss.getY(), boss.getWidth(), boss.getHeight(), 18, 18
+            );
+            graphics.setFill(Color.WHITE);
+            graphics.fillText(
+                    "BOSS",
+                    boss.getX() + boss.getWidth() / 2 - 16,
+                    boss.getY() + boss.getHeight() / 2 + 5
+            );
+            double segmentGap = 3;
+            double segmentWidth = (boss.getWidth()
+                    - segmentGap * (boss.getMaxHealth() - 1)) / boss.getMaxHealth();
+            for (int segment = 0; segment < boss.getMaxHealth(); segment++) {
+                graphics.setFill(
+                        segment < boss.getHealth()
+                                ? Color.LIGHTGREEN
+                                : Color.DARKSLATEGRAY
+                );
+                graphics.fillRoundRect(
+                        boss.getX() + segment * (segmentWidth + segmentGap),
+                        boss.getY() - 14,
+                        segmentWidth,
+                        8,
+                        4,
+                        4
+                );
+            }
+        }
+
         if (paddle != null) {
             if (isUsable(vausSheet)) {
                 graphics.drawImage(
@@ -145,12 +164,9 @@ public class GameView implements GameDisplay {
             } else {
                 graphics.setFill(Color.WHITESMOKE);
                 graphics.fillRoundRect(
-                        paddle.getX(),
-                        PADDLE_Y,
-                        paddle.getWidth(),
-                        PADDLE_HEIGHT,
-                        8,
-                        8
+                        paddle.getX(), PADDLE_Y,
+                        paddle.getWidth(), PADDLE_HEIGHT,
+                        8, 8
                 );
             }
         }
@@ -170,6 +186,16 @@ public class GameView implements GameDisplay {
                         + "     Score " + score
                         + "     Lives " + lives
         );
+    }
+
+    @Override
+    public void renderExtraBalls(List<Ball> balls) {
+        GraphicsContext graphics = canvas.getGraphicsContext2D();
+        graphics.setFill(Color.LIGHTSKYBLUE);
+        for (Ball extraBall : balls) {
+            graphics.fillOval(extraBall.getX() - BALL_RADIUS, extraBall.getY() - BALL_RADIUS,
+                    BALL_RADIUS * 2, BALL_RADIUS * 2);
+        }
     }
 
     @Override
@@ -300,6 +326,10 @@ public class GameView implements GameDisplay {
             Brick brick,
             int index
     ) {
+        double brickWidth = brick.getWidth() - 4;
+        double brickHeight = brick.getHeight() - 4;
+        Color typeColor = Color.web(brick.getType().getColorHex());
+
         if (isUsable(blockSheet)) {
             int columns = Math.max(
                     1,
@@ -312,24 +342,30 @@ public class GameView implements GameDisplay {
                     sourceX, 0, 16, 8,
                     brick.getX(),
                     brick.getY(),
-                    brick.getWidth() - 4,
-                    brick.getHeight() - 4
+                    brickWidth,
+                    brickHeight
             );
         } else {
-            graphics.setFill(
-                    brick.getHitPoints() > 1
-                            ? Color.CORAL
-                            : Color.SKYBLUE
-            );
+            graphics.setFill(typeColor);
             graphics.fillRoundRect(
                     brick.getX(),
                     brick.getY(),
-                    brick.getWidth() - 4,
-                    brick.getHeight() - 4,
+                    brickWidth,
+                    brickHeight,
                     8,
                     8
             );
         }
+
+        // Keep the sprite pattern while showing each BrickType's visual cue.
+        graphics.setFill(typeColor);
+        graphics.fillRect(brick.getX(), brick.getY(), brickWidth, 4);
+        graphics.setFill(Color.WHITE);
+        graphics.fillText(
+                brick.getType().getSymbol(),
+                brick.getX() + brickWidth / 2 - 4,
+                brick.getY() + brickHeight / 2 + 4
+        );
     }
 
     private static Image loadImage(String path) {
