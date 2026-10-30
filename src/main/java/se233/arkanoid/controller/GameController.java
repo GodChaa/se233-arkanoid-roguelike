@@ -1,6 +1,7 @@
 package se233.arkanoid.controller;
 
 import se233.arkanoid.model.Ball;
+import se233.arkanoid.model.Boss;
 import se233.arkanoid.model.Brick;
 import se233.arkanoid.model.BrickType;
 import se233.arkanoid.model.GameModel;
@@ -29,6 +30,7 @@ public class GameController {
     private final GameEventLogger logger;
     private final UpgradeManager upgrades;
     private StageManager stages;
+    private Boss boss;
     private Paddle paddle;
     private Ball ball;
     private boolean leftPressed;
@@ -55,6 +57,7 @@ public class GameController {
         try {
             game.startNewGame();
             stages = createStageManager();
+            boss = null;
             paddle = new Paddle((FIELD_WIDTH - 100) / 2, 100, 420, FIELD_WIDTH);
             ball = createBall();
             leftPressed = false;
@@ -65,6 +68,18 @@ public class GameController {
         } catch (Exception exception) {
             handleException("Could not start a new game.", exception);
         }
+    }
+
+    /** Starts a fresh run directly at the boss stage for local gameplay testing. */
+    public void startBossTestGame() {
+        startNewGame();
+        if (stages == null || game.getState() != GameState.PLAYING) return;
+        for (int stage = 1; stage < 5; stage++) {
+            if (!stages.advanceToNextStage()) return;
+        }
+        boss = new Boss(FIELD_WIDTH);
+        logger.info("Boss test game started. Boss health: " + boss.getHealth());
+        render();
     }
 
     public void setLeftPressed(boolean pressed) {
@@ -90,6 +105,7 @@ public class GameController {
         double elapsed = Math.min(Math.max(elapsedSeconds, 0), 0.05);
         if (leftPressed) paddle.moveLeft(elapsed);
         if (rightPressed) paddle.moveRight(elapsed);
+        if (boss != null) boss.update(elapsed, FIELD_WIDTH);
 
         ball.move(elapsed);
         if (ball.getX() < BALL_RADIUS && ball.getVelocityX() < 0) {
@@ -125,9 +141,13 @@ public class GameController {
             return;
         }
 
-        handleBrickCollision();
-        if (game.getState() == GameState.PLAYING && stages.getCurrentStage().isCleared()) {
-            completeCurrentStage();
+        if (boss == null) {
+            handleBrickCollision();
+            if (game.getState() == GameState.PLAYING && stages.getCurrentStage().isCleared()) {
+                completeCurrentStage();
+            }
+        } else {
+            handleBossCollision();
         }
         render();
     }
@@ -166,6 +186,31 @@ public class GameController {
         }
     }
 
+    private void handleBossCollision() {
+        if (!boss.intersects(ball.getX(), ball.getY(), BALL_RADIUS)) return;
+
+        if (boss.hit()) {
+            game.addScore(25);
+            logger.score(game.getScore());
+            logger.info("Boss hit. Health remaining: " + boss.getHealth());
+            if (boss.isDefeated()) {
+                game.addScore(200);
+                logger.score(game.getScore());
+                logger.info("Boss defeated. Player won with score " + game.getScore());
+                game.win();
+                view.showEnd("YOU WIN", "Boss defeated! Final score: " + game.getScore(), this::startNewGame);
+                return;
+            }
+        }
+
+        if (ball.getVelocityY() > 0) {
+            ball.setPosition(ball.getX(), boss.getY() - BALL_RADIUS);
+        } else {
+            ball.setPosition(ball.getX(), boss.getY() + boss.getHeight() + BALL_RADIUS);
+        }
+        ball.bounceVertical();
+    }
+
     private void completeCurrentStage() {
         if (!stages.hasNextStage()) {
             game.win();
@@ -193,6 +238,10 @@ public class GameController {
             if (!stages.advanceToNextStage()) {
                 throw new GameException("There is no next stage after this upgrade.");
             }
+            if (stages.getCurrentStageNumber() == 5) {
+                boss = new Boss(FIELD_WIDTH);
+                logger.info("Boss stage started. Boss health: " + boss.getHealth());
+            }
             logger.info("Upgrade selected: " + upgrade.getName());
             view.hideOverlay();
             render();
@@ -208,7 +257,7 @@ public class GameController {
     }
 
     private void render() {
-        view.render(ball, paddle, stages == null ? null : stages.getCurrentStage(), game.getScore(),
+        view.render(ball, paddle, stages == null ? null : stages.getCurrentStage(), boss, game.getScore(),
                 game.getLives(), stages == null ? 1 : stages.getCurrentStageNumber());
     }
 
@@ -275,6 +324,14 @@ public class GameController {
                 ".NSSSSN.",
                 "..NBBN..",
                 "...SS..."));
+        result.add(createStage(
+                ".SSSSSS.",
+                "NBNNNNBN",
+                "NSSNNSSN",
+                ".NBNXBN.",
+                "NSSNNSSN",
+                ".SSSSSS."));
+        result.add(new Stage(List.of()));
         return result;
     }
 

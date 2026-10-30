@@ -11,6 +11,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import se233.arkanoid.model.Ball;
+import se233.arkanoid.model.Boss;
 import se233.arkanoid.model.Brick;
 import se233.arkanoid.model.Paddle;
 import se233.arkanoid.model.Stage;
@@ -43,7 +44,8 @@ public class GameView implements GameDisplay {
     public BorderPane getRoot() { return root; }
 
     @Override
-    public void render(Ball ball, Paddle paddle, Stage stage, int score, int lives, int stageNumber) {
+    public void render(Ball ball, Paddle paddle, Stage stage, Boss boss,
+                       int score, int lives, int stageNumber) {
         GraphicsContext graphics = canvas.getGraphicsContext2D();
         graphics.setFill(Color.rgb(17, 24, 39));
         graphics.fillRect(0, 0, WIDTH, HEIGHT);
@@ -56,6 +58,21 @@ public class GameView implements GameDisplay {
                 graphics.setFill(Color.rgb(17, 24, 39));
                 graphics.fillText(brick.getType().getSymbol(), brick.getX() + brick.getWidth() / 2 - 4,
                         brick.getY() + brick.getHeight() / 2 + 4);
+            }
+        }
+        if (boss != null && !boss.isDefeated()) {
+            graphics.setFill(Color.MEDIUMPURPLE);
+            graphics.fillRoundRect(boss.getX(), boss.getY(), boss.getWidth(), boss.getHeight(), 18, 18);
+            graphics.setFill(Color.WHITE);
+            graphics.fillText("BOSS", boss.getX() + boss.getWidth() / 2 - 16,
+                    boss.getY() + boss.getHeight() / 2 + 5);
+            double segmentGap = 3;
+            double segmentWidth = (boss.getWidth() - segmentGap * (boss.getMaxHealth() - 1))
+                    / boss.getMaxHealth();
+            for (int segment = 0; segment < boss.getMaxHealth(); segment++) {
+                graphics.setFill(segment < boss.getHealth() ? Color.LIGHTGREEN : Color.DARKSLATEGRAY);
+                graphics.fillRoundRect(boss.getX() + segment * (segmentWidth + segmentGap),
+                        boss.getY() - 14, segmentWidth, 8, 4, 4);
             }
         }
         if (paddle != null) {
