@@ -3,7 +3,6 @@ package se233.arkanoid.model;
 import java.util.List;
 import java.util.Objects;
 
-/** Selects and advances through the configured stages. */
 public class StageManager {
     private final List<Stage> stages;
     private int currentStageIndex;

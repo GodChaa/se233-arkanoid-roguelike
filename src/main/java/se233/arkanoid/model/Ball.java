@@ -1,6 +1,5 @@
 package se233.arkanoid.model;
 
-/** A moving ball represented by its center point and velocity. */
 public class Ball {
     private double x;
     private double y;
@@ -22,12 +21,10 @@ public class Ball {
         y += velocityY * elapsedSeconds;
     }
 
-    /** Reverse the horizontal component after hitting a vertical surface. */
     public void bounceHorizontal() {
         velocityX = -velocityX;
     }
 
-    /** Reverse the vertical component after hitting a horizontal surface. */
     public void bounceVertical() {
         velocityY = -velocityY;
     }

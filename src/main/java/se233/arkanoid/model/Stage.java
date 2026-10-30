@@ -3,7 +3,6 @@ package se233.arkanoid.model;
 import java.util.List;
 import java.util.Objects;
 
-/** A stage consists of the bricks that must be cleared to progress. */
 public class Stage {
     private final List<Brick> bricks;
 

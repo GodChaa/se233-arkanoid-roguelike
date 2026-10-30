@@ -1,6 +1,5 @@
 package se233.arkanoid.model;
 
-/** Holds the game state and applies changes from controllers and game rules. */
 public class GameModel {
     public static final int DEFAULT_LIVES = 3;
 
@@ -22,7 +21,6 @@ public class GameModel {
         score = Math.addExact(score, points);
     }
 
-    /** Hits a brick and awards its score exactly once when it is destroyed. */
     public boolean hitBrick(Brick brick) {
         requireState(GameState.PLAYING, "Bricks can only be hit while playing.");
         if (brick == null) {

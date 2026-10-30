@@ -1,6 +1,5 @@
 package se233.arkanoid.model;
 
-/** Player-controlled paddle constrained to a horizontal play field. */
 public class Paddle {
     private double x;
     private double width;

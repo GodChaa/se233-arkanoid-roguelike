@@ -1,6 +1,5 @@
 package se233.arkanoid.model;
 
-/** A brick with hit points and a score value awarded when it is destroyed. */
 public class Brick {
     private final int scoreValue;
     private int hitPoints;
@@ -16,7 +15,6 @@ public class Brick {
         this.scoreValue = scoreValue;
     }
 
-    /** @return true only on the hit that destroys this brick. */
     public boolean hit() {
         if (isDestroyed()) {
             return false;

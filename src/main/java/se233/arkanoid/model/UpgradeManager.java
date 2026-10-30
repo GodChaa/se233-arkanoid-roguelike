@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Random;
 
-/** Chooses a deterministic-size random offer and applies a selected upgrade. */
 public class UpgradeManager {
     private final List<Upgrade> availableUpgrades;
     private final Random random;
