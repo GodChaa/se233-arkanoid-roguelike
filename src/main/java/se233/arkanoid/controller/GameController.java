@@ -2,6 +2,7 @@ package se233.arkanoid.controller;
 
 import se233.arkanoid.model.Ball;
 import se233.arkanoid.model.Brick;
+import se233.arkanoid.model.BrickType;
 import se233.arkanoid.model.GameModel;
 import se233.arkanoid.model.GameState;
 import se233.arkanoid.model.GameException;
@@ -253,22 +254,50 @@ public class GameController {
 
     private static List<Stage> createStages() {
         List<Stage> result = new ArrayList<>();
-        result.add(createStage(3, 1));
-        result.add(createStage(4, 1));
-        result.add(createStage(4, 2));
+        result.add(createStage(
+                "...NN...",
+                "..NNNN..",
+                ".NNBBNN.",
+                "NNBNNBNN",
+                ".NNNNNN."));
+        result.add(createStage(
+                ".SSSSSS.",
+                "NBNNNNBN",
+                ".SSNXNS.",
+                "NBNNNNBN",
+                ".SSNNSS.",
+                ".SSSSSS."));
+        result.add(createStage(
+                "...SS...",
+                "..NBBN..",
+                ".NSSSSN.",
+                "NBSXSNBN",
+                ".NSSSSN.",
+                "..NBBN..",
+                "...SS..."));
         return result;
     }
 
-    private static Stage createStage(int rows, int hitPoints) {
+    private static Stage createStage(String... layout) {
         List<Brick> bricks = new ArrayList<>();
         int columns = 8;
         double brickWidth = 70;
         double gap = 6;
         double left = (FIELD_WIDTH - columns * (brickWidth + gap) + gap) / 2;
-        for (int row = 0; row < rows; row++) {
+        for (int row = 0; row < layout.length; row++) {
             for (int column = 0; column < columns; column++) {
-                bricks.add(new Brick(left + column * (brickWidth + gap), 65 + row * 32,
-                        brickWidth, 28, hitPoints, 10 * hitPoints));
+                BrickType type = switch (layout[row].charAt(column)) {
+                    case 'N' -> BrickType.NORMAL;
+                    case 'S' -> BrickType.STRONG;
+                    case 'B' -> BrickType.BONUS;
+                    case 'X' -> BrickType.SPECIAL;
+                    case '.' -> null;
+                    default -> throw new IllegalArgumentException("Unknown brick in stage layout.");
+                };
+                if (type != null) {
+                    bricks.add(new Brick(left + column * (brickWidth + gap), 65 + row * 32,
+                            brickWidth, 28, type));
+                }
             }
         }
         return new Stage(bricks);

@@ -37,6 +37,7 @@ public class GameModel {
         boolean destroyed = brick.hit();
         if (destroyed) {
             addScore(brick.getScoreValue());
+            if (brick.getType() == BrickType.SPECIAL) addLife();
         }
         return destroyed;
     }

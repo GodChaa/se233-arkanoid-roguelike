@@ -6,6 +6,7 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import se233.arkanoid.model.Ball;
 import se233.arkanoid.model.Brick;
+import se233.arkanoid.model.BrickType;
 import se233.arkanoid.model.GameModel;
 import se233.arkanoid.model.GameState;
 import se233.arkanoid.model.Paddle;
@@ -47,7 +48,7 @@ class GameControllerTest {
 
         assertEquals(GameState.PLAYING, harness.controller.getGame().getState());
         assertEquals(3, harness.controller.getGame().getLives());
-        assertEquals(24, harness.display.stage.getBricks().size());
+        assertEquals(26, harness.display.stage.getBricks().size());
     }
 
     @Test
@@ -433,7 +434,7 @@ class GameControllerTest {
         harness.display.selectUpgrade(0);
 
         assertEquals(2, harness.display.stageNumber);
-        assertEquals(32, harness.display.stage.getBricks().size());
+        assertEquals(40, harness.display.stage.getBricks().size());
         assertEquals(expectedLives, harness.display.lives);
     }
 
@@ -470,8 +471,9 @@ class GameControllerTest {
     void createStagesBuildsThreeProgressivelyHarderStages() {
         Harness harness = new Harness(new Random(1));
         harness.controller.startNewGame();
-        assertEquals(24, harness.display.stage.getBricks().size());
-        assertEquals(1, harness.display.stage.getBricks().get(0).getHitPoints());
+        assertEquals(26, harness.display.stage.getBricks().size());
+        assertTrue(harness.display.stage.getBricks().stream().anyMatch(brick -> brick.getType() == BrickType.NORMAL));
+        assertTrue(harness.display.stage.getBricks().stream().anyMatch(brick -> brick.getType() == BrickType.BONUS));
 
         for (int stage = 0; stage < 2; stage++) {
             clearCurrentStage(harness);
@@ -481,6 +483,7 @@ class GameControllerTest {
 
         assertEquals(32, harness.display.stage.getBricks().size());
         assertEquals(2, harness.display.stage.getBricks().get(0).getHitPoints());
+        assertTrue(harness.display.stage.getBricks().stream().anyMatch(brick -> brick.getType() == BrickType.SPECIAL));
     }
 
     @Test
@@ -493,8 +496,10 @@ class GameControllerTest {
         harness.display.selectUpgrade(0);
 
         assertEquals(2, harness.display.stageNumber);
-        assertEquals(32, harness.display.stage.getBricks().size());
-        assertEquals(1, harness.display.stage.getBricks().get(0).getHitPoints());
+        assertEquals(40, harness.display.stage.getBricks().size());
+        assertEquals(2, harness.display.stage.getBricks().get(0).getHitPoints());
+        assertTrue(harness.display.stage.getBricks().stream().anyMatch(brick -> brick.getType() == BrickType.STRONG));
+        assertTrue(harness.display.stage.getBricks().stream().anyMatch(brick -> brick.getType() == BrickType.SPECIAL));
     }
 
     @Test
@@ -517,8 +522,10 @@ class GameControllerTest {
         harness.controller.startNewGame();
 
         assertEquals(65, harness.display.stage.getBricks().get(0).getY(), 0.0001);
-        assertEquals(97, harness.display.stage.getBricks().get(8).getY(), 0.0001);
-        assertEquals(129, harness.display.stage.getBricks().get(16).getY(), 0.0001);
+        assertTrue(harness.display.stage.getBricks().stream().anyMatch(brick -> brick.getY() == 97));
+        assertTrue(harness.display.stage.getBricks().stream().anyMatch(brick -> brick.getY() == 129));
+        assertTrue(harness.display.stage.getBricks().stream().anyMatch(brick -> brick.getY() == 161));
+        assertTrue(harness.display.stage.getBricks().stream().anyMatch(brick -> brick.getY() == 193));
     }
 
     private static void clearCurrentStage(Harness harness) {

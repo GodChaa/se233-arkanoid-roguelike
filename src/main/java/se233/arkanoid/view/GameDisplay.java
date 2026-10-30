@@ -8,7 +8,6 @@ import se233.arkanoid.model.Upgrade;
 import java.util.List;
 import java.util.function.Consumer;
 
-/** Small display boundary so the game controller can be tested without starting JavaFX. */
 public interface GameDisplay {
     void showMenu(Runnable startAction);
     void render(Ball ball, Paddle paddle, Stage stage, int score, int lives, int stageNumber);

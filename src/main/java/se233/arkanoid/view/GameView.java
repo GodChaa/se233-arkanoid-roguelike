@@ -50,9 +50,12 @@ public class GameView implements GameDisplay {
         if (stage != null) {
             for (Brick brick : stage.getBricks()) {
                 if (brick.isDestroyed()) continue;
-                graphics.setFill(brick.getHitPoints() > 1 ? Color.CORAL : Color.SKYBLUE);
+                graphics.setFill(Color.web(brick.getType().getColorHex()));
                 graphics.fillRoundRect(brick.getX(), brick.getY(), brick.getWidth() - 4,
                         brick.getHeight() - 4, 8, 8);
+                graphics.setFill(Color.rgb(17, 24, 39));
+                graphics.fillText(brick.getType().getSymbol(), brick.getX() + brick.getWidth() / 2 - 4,
+                        brick.getY() + brick.getHeight() / 2 + 4);
             }
         }
         if (paddle != null) {

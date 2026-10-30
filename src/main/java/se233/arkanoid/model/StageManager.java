@@ -22,7 +22,6 @@ public class StageManager {
         return stages.get(currentStageIndex);
     }
 
-    /** @return true if the manager advanced to another stage. */
     public boolean advanceToNextStage() {
         if (currentStageIndex + 1 >= stages.size()) {
             return false;
