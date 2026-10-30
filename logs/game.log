@@ -1,0 +1,1108 @@
+Oct 30, 2026 4:21:06 PM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Oct 30, 2026 4:21:08 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Oct 30, 2026 4:21:08 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:21:10 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 2
+Oct 30, 2026 4:21:12 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 20
+Oct 30, 2026 4:21:12 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:21:14 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 1
+Oct 30, 2026 4:21:16 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 30
+Oct 30, 2026 4:21:16 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:21:33 PM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Oct 30, 2026 4:21:35 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Oct 30, 2026 4:21:35 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:21:37 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 2
+Oct 30, 2026 4:21:39 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 20
+Oct 30, 2026 4:21:39 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:21:41 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 1
+Oct 30, 2026 4:21:43 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 30
+Oct 30, 2026 4:21:43 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:21:43 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 40
+Oct 30, 2026 4:21:43 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:21:43 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 50
+Oct 30, 2026 4:21:43 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:21:43 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 60
+Oct 30, 2026 4:21:43 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:21:44 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 70
+Oct 30, 2026 4:21:44 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:21:44 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 80
+Oct 30, 2026 4:21:44 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:21:45 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 90
+Oct 30, 2026 4:21:45 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:21:45 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 100
+Oct 30, 2026 4:21:45 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:21:46 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 110
+Oct 30, 2026 4:21:46 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:21:46 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 120
+Oct 30, 2026 4:21:46 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:21:47 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 130
+Oct 30, 2026 4:21:47 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:21:47 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 140
+Oct 30, 2026 4:21:47 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:21:48 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 150
+Oct 30, 2026 4:21:48 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:21:49 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 160
+Oct 30, 2026 4:21:49 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:21:52 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 0
+Oct 30, 2026 4:32:25 PM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Oct 30, 2026 4:32:27 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Oct 30, 2026 4:32:27 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:32:29 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 2
+Oct 30, 2026 4:32:31 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 20
+Oct 30, 2026 4:32:31 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:32:33 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 1
+Oct 30, 2026 4:32:35 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 30
+Oct 30, 2026 4:32:35 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:32:35 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 40
+Oct 30, 2026 4:32:35 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:32:35 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 50
+Oct 30, 2026 4:32:35 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:32:36 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 60
+Oct 30, 2026 4:32:36 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:32:36 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 70
+Oct 30, 2026 4:32:36 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:32:37 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 80
+Oct 30, 2026 4:32:37 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:32:37 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 90
+Oct 30, 2026 4:32:37 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:32:37 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 100
+Oct 30, 2026 4:32:37 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:32:38 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 110
+Oct 30, 2026 4:32:38 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:32:38 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 120
+Oct 30, 2026 4:32:38 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:32:39 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 130
+Oct 30, 2026 4:32:39 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:32:39 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 140
+Oct 30, 2026 4:32:39 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:32:40 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 4:32:40 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 150
+Oct 30, 2026 4:32:40 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:32:40 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 4:32:41 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 160
+Oct 30, 2026 4:32:41 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:32:44 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 0
+Oct 30, 2026 4:40:51 PM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Oct 30, 2026 4:40:53 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Oct 30, 2026 4:40:53 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:40:54 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 4:40:54 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 4:40:55 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 2
+Oct 30, 2026 4:40:57 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 20
+Oct 30, 2026 4:40:57 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:40:59 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 1
+Oct 30, 2026 4:41:01 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 30
+Oct 30, 2026 4:41:01 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:41:01 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 40
+Oct 30, 2026 4:41:01 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:41:01 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 50
+Oct 30, 2026 4:41:01 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:41:01 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 60
+Oct 30, 2026 4:41:01 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:41:02 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 70
+Oct 30, 2026 4:41:02 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:41:03 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 80
+Oct 30, 2026 4:41:03 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:41:03 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 90
+Oct 30, 2026 4:41:03 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:41:03 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 100
+Oct 30, 2026 4:41:03 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:41:04 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 110
+Oct 30, 2026 4:41:04 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:48:04 PM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Oct 30, 2026 4:48:06 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Oct 30, 2026 4:48:06 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:48:08 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 2
+Oct 30, 2026 4:48:10 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 20
+Oct 30, 2026 4:48:10 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:48:12 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 1
+Oct 30, 2026 4:48:14 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 30
+Oct 30, 2026 4:48:14 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:48:14 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 40
+Oct 30, 2026 4:48:14 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:48:14 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 50
+Oct 30, 2026 4:48:14 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:48:14 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 60
+Oct 30, 2026 4:48:14 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:48:15 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 70
+Oct 30, 2026 4:48:15 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:48:15 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 80
+Oct 30, 2026 4:48:15 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:48:16 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 90
+Oct 30, 2026 4:48:16 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:48:16 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 100
+Oct 30, 2026 4:48:16 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:48:16 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 110
+Oct 30, 2026 4:48:16 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:48:17 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 120
+Oct 30, 2026 4:48:17 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:48:17 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 130
+Oct 30, 2026 4:48:17 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:48:18 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 140
+Oct 30, 2026 4:48:18 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:48:19 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 150
+Oct 30, 2026 4:48:19 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:48:19 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 160
+Oct 30, 2026 4:48:19 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:48:23 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 0
+Oct 30, 2026 4:48:25 PM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Oct 30, 2026 4:48:26 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Oct 30, 2026 4:48:26 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:48:29 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 2
+Oct 30, 2026 4:51:43 PM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Oct 30, 2026 4:51:45 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Oct 30, 2026 4:51:45 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:51:47 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 2
+Oct 30, 2026 4:51:49 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 20
+Oct 30, 2026 4:51:49 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:51:51 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 4:51:51 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 1
+Oct 30, 2026 4:51:51 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 4:51:52 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 4:51:53 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 4:51:53 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 30
+Oct 30, 2026 4:51:53 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:51:53 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 40
+Oct 30, 2026 4:51:53 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:51:53 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 50
+Oct 30, 2026 4:51:53 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:51:53 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 60
+Oct 30, 2026 4:51:53 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:51:54 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 70
+Oct 30, 2026 4:51:54 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:51:55 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 80
+Oct 30, 2026 4:51:55 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:51:55 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 90
+Oct 30, 2026 4:51:55 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:51:55 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 100
+Oct 30, 2026 4:51:55 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:51:56 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 110
+Oct 30, 2026 4:51:56 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:51:56 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 120
+Oct 30, 2026 4:51:56 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:51:57 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 130
+Oct 30, 2026 4:51:57 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:51:57 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 140
+Oct 30, 2026 4:51:57 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:51:58 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 150
+Oct 30, 2026 4:51:58 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:51:59 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 160
+Oct 30, 2026 4:51:59 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:52:01 PM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Oct 30, 2026 4:52:03 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 170
+Oct 30, 2026 4:52:03 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:52:06 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 0
+Oct 30, 2026 4:52:08 PM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Oct 30, 2026 4:52:10 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Oct 30, 2026 4:52:10 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:52:12 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 2
+Oct 30, 2026 4:52:14 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 20
+Oct 30, 2026 4:52:14 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:52:16 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 1
+Oct 30, 2026 4:52:17 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 4:52:17 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 4:52:17 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 4:52:17 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 4:52:18 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 30
+Oct 30, 2026 4:52:18 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:52:18 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 40
+Oct 30, 2026 4:52:18 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:52:18 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 50
+Oct 30, 2026 4:52:18 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:52:18 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 60
+Oct 30, 2026 4:52:18 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:52:18 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 4:52:18 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 4:52:19 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 70
+Oct 30, 2026 4:52:19 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:52:19 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 80
+Oct 30, 2026 4:52:19 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:52:20 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 90
+Oct 30, 2026 4:52:20 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:52:20 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 100
+Oct 30, 2026 4:52:20 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:52:20 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 110
+Oct 30, 2026 4:52:20 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:52:21 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 120
+Oct 30, 2026 4:52:21 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:52:21 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 130
+Oct 30, 2026 4:52:21 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:52:22 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 140
+Oct 30, 2026 4:52:22 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:52:23 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 150
+Oct 30, 2026 4:52:23 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:52:23 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 160
+Oct 30, 2026 4:52:23 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:52:27 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 0
+Oct 30, 2026 4:52:55 PM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Oct 30, 2026 4:52:57 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Oct 30, 2026 4:52:57 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:52:59 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 2
+Oct 30, 2026 4:53:01 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 20
+Oct 30, 2026 4:53:01 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 4:53:03 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 1
+Oct 30, 2026 5:10:06 PM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Oct 30, 2026 5:10:08 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Oct 30, 2026 5:10:08 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:10 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 2
+Oct 30, 2026 5:10:12 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 20
+Oct 30, 2026 5:10:12 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:14 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:10:14 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:10:14 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:10:14 PM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Oct 30, 2026 5:10:15 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:10:16 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 30
+Oct 30, 2026 5:10:16 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:18 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 1
+Oct 30, 2026 5:10:20 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 40
+Oct 30, 2026 5:10:20 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:21 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 50
+Oct 30, 2026 5:10:21 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:21 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 60
+Oct 30, 2026 5:10:21 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:21 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 70
+Oct 30, 2026 5:10:21 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:21 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 80
+Oct 30, 2026 5:10:21 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:22 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 90
+Oct 30, 2026 5:10:22 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:22 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 100
+Oct 30, 2026 5:10:22 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:22 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 110
+Oct 30, 2026 5:10:22 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:23 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 120
+Oct 30, 2026 5:10:23 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:23 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 130
+Oct 30, 2026 5:10:23 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:24 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 140
+Oct 30, 2026 5:10:24 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:24 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 150
+Oct 30, 2026 5:10:24 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:25 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 160
+Oct 30, 2026 5:10:25 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:26 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 170
+Oct 30, 2026 5:10:26 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:29 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 0
+Oct 30, 2026 5:10:32 PM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Oct 30, 2026 5:10:33 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Oct 30, 2026 5:10:33 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:36 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 2
+Oct 30, 2026 5:10:38 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 20
+Oct 30, 2026 5:10:38 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:40 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 1
+Oct 30, 2026 5:10:42 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 30
+Oct 30, 2026 5:10:42 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:42 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 40
+Oct 30, 2026 5:10:42 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:42 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 50
+Oct 30, 2026 5:10:42 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:42 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 60
+Oct 30, 2026 5:10:42 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:43 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 70
+Oct 30, 2026 5:10:43 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:43 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 80
+Oct 30, 2026 5:10:43 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:44 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 90
+Oct 30, 2026 5:10:44 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:44 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 100
+Oct 30, 2026 5:10:44 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:44 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 110
+Oct 30, 2026 5:10:44 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:45 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 120
+Oct 30, 2026 5:10:45 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:45 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 130
+Oct 30, 2026 5:10:45 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:46 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 140
+Oct 30, 2026 5:10:46 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:47 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 150
+Oct 30, 2026 5:10:47 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:47 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 160
+Oct 30, 2026 5:10:47 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:10:50 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 0
+Oct 30, 2026 5:11:05 PM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Oct 30, 2026 5:11:07 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Oct 30, 2026 5:11:07 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:11:09 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 2
+Oct 30, 2026 5:11:11 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 20
+Oct 30, 2026 5:11:11 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:11:13 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 1
+Oct 30, 2026 5:11:15 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 30
+Oct 30, 2026 5:11:15 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:11:15 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 40
+Oct 30, 2026 5:11:15 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:11:15 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 50
+Oct 30, 2026 5:11:15 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:11:15 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 60
+Oct 30, 2026 5:11:15 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:11:16 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 70
+Oct 30, 2026 5:11:16 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:11:16 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 80
+Oct 30, 2026 5:11:16 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:11:17 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 90
+Oct 30, 2026 5:11:17 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:11:17 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 100
+Oct 30, 2026 5:11:17 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:11:18 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 110
+Oct 30, 2026 5:11:18 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:11:18 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 120
+Oct 30, 2026 5:11:18 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:11:19 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 130
+Oct 30, 2026 5:11:19 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:11:19 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 140
+Oct 30, 2026 5:11:19 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:11:20 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 150
+Oct 30, 2026 5:11:20 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:11:21 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 160
+Oct 30, 2026 5:11:21 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:11:24 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 0
+Oct 30, 2026 5:12:52 PM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Oct 30, 2026 5:12:54 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:12:54 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:12:54 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:12:54 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:12:54 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:12:54 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Oct 30, 2026 5:12:54 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:12:54 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:12:55 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 5:12:55 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 5:12:55 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 5:12:55 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 5:12:56 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:12:56 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:12:56 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:12:56 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 2
+Oct 30, 2026 5:12:56 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:12:57 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 5:12:57 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 5:12:57 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 5:12:57 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 5:12:57 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 5:12:58 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 20
+Oct 30, 2026 5:12:58 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:12:58 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 5:12:59 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:12:59 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:13:00 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:13:00 PM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Oct 30, 2026 5:13:00 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:13:01 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:13:01 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:13:02 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 30
+Oct 30, 2026 5:13:02 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:02 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 5:13:02 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 5:13:02 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 5:13:02 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 5:13:02 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 5:13:03 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 5:13:03 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:13:04 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:13:04 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 1
+Oct 30, 2026 5:13:04 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 5:13:04 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 5:13:05 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 5:13:05 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 5:13:05 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:13:05 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:13:06 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 5:13:06 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 40
+Oct 30, 2026 5:13:06 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:06 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 50
+Oct 30, 2026 5:13:06 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:06 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 60
+Oct 30, 2026 5:13:06 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:06 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 70
+Oct 30, 2026 5:13:06 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:06 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 5:13:07 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:13:07 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 80
+Oct 30, 2026 5:13:07 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:07 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 90
+Oct 30, 2026 5:13:07 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:08 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 100
+Oct 30, 2026 5:13:08 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:08 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:13:08 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 110
+Oct 30, 2026 5:13:08 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:08 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 120
+Oct 30, 2026 5:13:08 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:09 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 130
+Oct 30, 2026 5:13:09 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:09 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 140
+Oct 30, 2026 5:13:09 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:10 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 150
+Oct 30, 2026 5:13:10 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:10 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:13:10 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:13:11 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 160
+Oct 30, 2026 5:13:11 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:11 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 5:13:11 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 170
+Oct 30, 2026 5:13:11 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:12 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 5:13:13 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:13:13 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:13:13 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:13:13 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:13:13 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:13:13 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:13:13 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:13:14 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:13:14 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:13:14 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:13:14 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:13:14 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:13:14 PM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Oct 30, 2026 5:13:14 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:13:14 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:13:14 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:13:14 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:13:15 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:13:15 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:13:15 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:13:15 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:13:15 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:13:15 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:13:15 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:13:15 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:13:16 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 5:13:16 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 180
+Oct 30, 2026 5:13:16 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:16 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 5:13:17 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 5:13:17 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 5:13:18 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:13:18 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:13:18 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 5:13:18 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 5:13:18 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 0
+Oct 30, 2026 5:13:20 PM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Oct 30, 2026 5:13:22 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Oct 30, 2026 5:13:22 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:24 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 2
+Oct 30, 2026 5:13:26 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 20
+Oct 30, 2026 5:13:26 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:29 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 1
+Oct 30, 2026 5:13:31 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 30
+Oct 30, 2026 5:13:31 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:31 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 40
+Oct 30, 2026 5:13:31 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:31 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 50
+Oct 30, 2026 5:13:31 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:31 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 60
+Oct 30, 2026 5:13:31 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:31 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 70
+Oct 30, 2026 5:13:31 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:32 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 80
+Oct 30, 2026 5:13:32 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:32 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 90
+Oct 30, 2026 5:13:32 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:33 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 100
+Oct 30, 2026 5:13:33 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:33 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 110
+Oct 30, 2026 5:13:33 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:33 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 120
+Oct 30, 2026 5:13:33 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:34 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 130
+Oct 30, 2026 5:13:34 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:35 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 140
+Oct 30, 2026 5:13:35 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:35 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 150
+Oct 30, 2026 5:13:35 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:36 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 160
+Oct 30, 2026 5:13:36 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:13:39 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 0
+Oct 30, 2026 5:13:54 PM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Oct 30, 2026 5:13:56 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Oct 30, 2026 5:13:56 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:34:18 PM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Oct 30, 2026 5:34:19 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Oct 30, 2026 5:34:19 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:34:22 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 2
+Oct 30, 2026 5:34:24 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 20
+Oct 30, 2026 5:34:24 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:34:26 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 1
+Oct 30, 2026 5:34:28 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 30
+Oct 30, 2026 5:34:28 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:34:28 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 40
+Oct 30, 2026 5:34:28 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:34:28 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 50
+Oct 30, 2026 5:34:28 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:34:28 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 60
+Oct 30, 2026 5:34:28 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:34:29 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 70
+Oct 30, 2026 5:34:29 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:34:29 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 80
+Oct 30, 2026 5:34:29 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:34:30 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 90
+Oct 30, 2026 5:34:30 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:34:30 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 100
+Oct 30, 2026 5:34:30 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:34:30 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 110
+Oct 30, 2026 5:34:30 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:34:31 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 120
+Oct 30, 2026 5:34:31 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:34:31 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 130
+Oct 30, 2026 5:34:31 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:34:32 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 140
+Oct 30, 2026 5:34:32 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:34:33 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 150
+Oct 30, 2026 5:34:33 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:34:33 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 160
+Oct 30, 2026 5:34:33 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 5:34:36 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 0
