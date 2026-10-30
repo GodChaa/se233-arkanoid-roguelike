@@ -52,6 +52,22 @@ class GameModelTest {
     }
 
     @Test
+    void awardsBrickPointsOnlyWhenTheBrickIsDestroyed() {
+        GameModel game = new GameModel();
+        game.startNewGame();
+        Brick brick = new Brick(2, 40);
+
+        game.hitBrick(brick);
+        assertEquals(0, game.getScore());
+
+        game.hitBrick(brick);
+        assertEquals(40, game.getScore());
+
+        game.hitBrick(brick);
+        assertEquals(40, game.getScore());
+    }
+
+    @Test
     void pausesForAnUpgradeAfterAStageIsCleared() {
         GameModel game = new GameModel();
         game.startNewGame();

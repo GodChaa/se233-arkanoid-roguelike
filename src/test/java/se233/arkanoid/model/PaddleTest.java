@@ -34,7 +34,7 @@ class PaddleTest {
 
         paddle.increaseWidth(40);
 
-        assertEquals(100.0, paddle.getWidth(), 0.0001);
-        assertEquals(400.0, paddle.getX(), 0.0001);
+        assertEquals(120.0, paddle.getWidth(), 0.0001);
+        assertEquals(380.0, paddle.getX(), 0.0001);
     }
 }

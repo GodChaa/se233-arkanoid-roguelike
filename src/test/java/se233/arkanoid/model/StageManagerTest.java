@@ -19,6 +19,8 @@ class StageManagerTest {
         first.hit();
         assertFalse(stage.isCleared());
         second.hit();
+        assertFalse(stage.isCleared());
+        second.hit();
         assertTrue(stage.isCleared());
         second.hit();
         assertTrue(stage.isCleared());
