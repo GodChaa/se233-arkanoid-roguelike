@@ -12,6 +12,7 @@ import java.util.function.Consumer;
 public interface GameDisplay {
     void showMenu(Runnable startAction);
     void render(Ball ball, Paddle paddle, Stage stage, Boss boss, int score, int lives, int stageNumber);
+    default void renderExtraBalls(List<Ball> balls) { }
     void showUpgradeChoices(List<Upgrade> choices, Consumer<Upgrade> onSelect);
     void showEnd(String title, String detail, Runnable restartAction);
     void showError(String detail, Runnable restartAction);

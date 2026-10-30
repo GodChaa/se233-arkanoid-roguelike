@@ -88,6 +88,16 @@ public class GameView implements GameDisplay {
     }
 
     @Override
+    public void renderExtraBalls(List<Ball> balls) {
+        GraphicsContext graphics = canvas.getGraphicsContext2D();
+        graphics.setFill(Color.LIGHTSKYBLUE);
+        for (Ball extraBall : balls) {
+            graphics.fillOval(extraBall.getX() - BALL_RADIUS, extraBall.getY() - BALL_RADIUS,
+                    BALL_RADIUS * 2, BALL_RADIUS * 2);
+        }
+    }
+
+    @Override
     public void showMenu(Runnable startAction) {
         showOverlay("ARKANOID ROGUELIKE", "Break every brick. Choose upgrades between stages.",
                 List.of(button("Start Game", startAction)));

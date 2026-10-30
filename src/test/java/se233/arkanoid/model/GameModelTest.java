@@ -82,6 +82,29 @@ class GameModelTest {
     }
 
     @Test
+    void scoreUpgradeIncreasesPointsForDestroyedBricks() {
+        GameModel game = new GameModel();
+        game.startNewGame();
+        game.multiplyBrickScore(1.5);
+
+        game.hitBrick(new Brick(1, 40));
+
+        assertEquals(60, game.getScore());
+        assertEquals(1.5, game.getBrickScoreMultiplier());
+    }
+
+    @Test
+    void newRunResetsBrickScoreMultiplier() {
+        GameModel game = new GameModel();
+        game.startNewGame();
+        game.multiplyBrickScore(1.5);
+
+        game.startNewGame();
+
+        assertEquals(1.0, game.getBrickScoreMultiplier());
+    }
+
+    @Test
     void specialBrickGrantsOneLifeWhenItBreaks() {
         GameModel game = new GameModel();
         game.startNewGame();

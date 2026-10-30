@@ -25,6 +25,7 @@ import java.util.function.Consumer;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -328,7 +329,7 @@ class GameControllerTest {
 
     @Test
     @Order(22)
-    void completeCurrentStageWinsAfterTheFinalStage() {
+    void defeatingBossAdvancesToTheNextRegularStage() {
         Harness harness = new Harness(new Random(1));
         harness.controller.startNewGame();
         for (int stage = 0; stage < 4; stage++) {
@@ -346,8 +347,13 @@ class GameControllerTest {
             }
         }
 
-        assertEquals(GameState.VICTORY, harness.controller.getGame().getState());
-        assertEquals("YOU WIN", harness.display.endTitle);
+        assertEquals(GameState.UPGRADE, harness.controller.getGame().getState());
+        assertNull(harness.display.boss);
+        harness.display.selectUpgrade(0);
+        assertEquals(GameState.PLAYING, harness.controller.getGame().getState());
+        assertEquals(6, harness.display.stageNumber);
+        assertNull(harness.display.boss);
+        assertFalse(harness.display.stage.isCleared());
     }
 
     @Test
@@ -386,6 +392,45 @@ class GameControllerTest {
     }
 
     @Test
+    void extraBallUpgradeSpawnsAndRendersAnotherBall() {
+        Upgrade extraBall = upgrade("Extra ball", GameModel::addExtraBall);
+        Harness harness = new Harness(new UpgradeManager(List.of(extraBall,
+                upgrade("Choice B", game -> {}), upgrade("Choice C", game -> {})), new Random(1)));
+        harness.controller.startNewGame();
+        clearCurrentStage(harness);
+        harness.controller.update(0);
+
+        harness.display.choose(extraBall);
+
+        assertEquals(1, harness.controller.getGame().getExtraBallCount());
+        assertEquals(1, harness.display.extraBalls.size());
+    }
+
+    @Test
+    void bossAppearsAgainAtStageTen() {
+        Harness harness = new Harness(new Random(1));
+        harness.controller.startNewGame();
+        for (int stage = 1; stage < 10; stage++) {
+            if (stage % 5 == 0) {
+                for (int hit = 0; hit < Boss.DEFAULT_HEALTH; hit++) {
+                    hitBoss(harness);
+                    if (hit < Boss.DEFAULT_HEALTH - 1) {
+                        for (int frame = 0; frame < 7; frame++) harness.controller.update(0.05);
+                    }
+                }
+            } else {
+                clearCurrentStage(harness);
+                harness.controller.update(0);
+            }
+            harness.display.selectUpgrade(0);
+        }
+
+        assertEquals(10, harness.display.stageNumber);
+        assertNotNull(harness.display.boss);
+        assertEquals(Boss.DEFAULT_HEALTH, harness.display.boss.getHealth());
+    }
+
+    @Test
     @Order(25)
     void selectUpgradeRoutesFailuresThroughTheCentralExceptionHandler() {
         Upgrade brokenUpgrade = upgrade("Broken", game -> {
@@ -401,6 +446,18 @@ class GameControllerTest {
 
         assertNotNull(harness.display.errorDetail);
         assertEquals(1, harness.logger.errors.size());
+    }
+
+    @Test
+    void updateRoutesUnexpectedRuntimeFailuresThroughTheCentralExceptionHandler() {
+        Harness harness = new Harness(new Random(1));
+        harness.controller.startNewGame();
+
+        harness.controller.update(Double.NaN);
+
+        assertNotNull(harness.display.errorDetail);
+        assertEquals(1, harness.logger.errors.size());
+        assertTrue(harness.logger.errors.get(0).contains("error occurred"));
     }
 
     @Test
@@ -596,6 +653,7 @@ class GameControllerTest {
         private Runnable restartAction;
         private Consumer<Upgrade> upgradeAction;
         private List<Upgrade> upgradeChoices = List.of();
+        private List<Ball> extraBalls = List.of();
         private Ball ball;
         private Paddle paddle;
         private Stage stage;
@@ -621,6 +679,8 @@ class GameControllerTest {
             this.stageNumber = stageNumber;
             renderCount++;
         }
+
+        @Override public void renderExtraBalls(List<Ball> balls) { extraBalls = List.copyOf(balls); }
 
         @Override public void showUpgradeChoices(List<Upgrade> choices, Consumer<Upgrade> onSelect) {
             upgradeChoices = choices;

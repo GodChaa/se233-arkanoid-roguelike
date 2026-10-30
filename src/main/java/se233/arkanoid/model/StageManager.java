@@ -1,5 +1,6 @@
 package se233.arkanoid.model;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,7 +16,7 @@ public class StageManager {
         if (stages.stream().anyMatch(Objects::isNull)) {
             throw new IllegalArgumentException("Stages cannot contain null entries.");
         }
-        this.stages = List.copyOf(stages);
+        this.stages = new ArrayList<>(stages);
     }
 
     public Stage getCurrentStage() {
@@ -32,6 +33,10 @@ public class StageManager {
 
     public boolean hasNextStage() {
         return currentStageIndex + 1 < stages.size();
+    }
+
+    public void appendStage(Stage stage) {
+        stages.add(Objects.requireNonNull(stage, "Stage cannot be null."));
     }
 
     public int getCurrentStageNumber() {
