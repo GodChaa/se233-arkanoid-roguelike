@@ -3,7 +3,7 @@ package se233.arkanoid.model;
 public class Paddle {
     private double x;
     private double width;
-    private final double speed;
+    private double speed;
     private final double fieldWidth;
 
     public Paddle(double x, double width, double speed, double fieldWidth) {
@@ -57,6 +57,13 @@ public class Paddle {
 
     public double getSpeed() {
         return speed;
+    }
+
+    public void increaseSpeed(double amount) {
+        if (!Double.isFinite(amount) || amount < 0) {
+            throw new IllegalArgumentException("Speed increase must be non-negative and finite.");
+        }
+        speed += amount;
     }
 
     private static void validateElapsedTime(double elapsedSeconds) {

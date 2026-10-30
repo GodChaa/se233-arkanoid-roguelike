@@ -44,4 +44,20 @@ public class Ball {
     public double getVelocityY() {
         return velocityY;
     }
+
+    public void setPosition(double x, double y) {
+        if (!Double.isFinite(x) || !Double.isFinite(y)) {
+            throw new IllegalArgumentException("Ball position must be finite.");
+        }
+        this.x = x;
+        this.y = y;
+    }
+
+    public void multiplySpeed(double multiplier) {
+        if (!Double.isFinite(multiplier) || multiplier <= 0) {
+            throw new IllegalArgumentException("Speed multiplier must be positive and finite.");
+        }
+        velocityX *= multiplier;
+        velocityY *= multiplier;
+    }
 }

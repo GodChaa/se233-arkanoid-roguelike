@@ -3,6 +3,8 @@ package se233.arkanoid.model;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class GameModelTest {
     @Test
@@ -75,5 +77,40 @@ class GameModelTest {
         game.completeStage();
 
         assertEquals(GameState.UPGRADE, game.getState());
+    }
+
+    @Test
+    void activatesAndKeepsPiercingModeActive() {
+        GameModel game = new GameModel();
+        game.startNewGame();
+
+        game.activatePiercingBall();
+        game.activatePiercingBall();
+
+        assertTrue(game.isPiercingBallActive());
+    }
+
+    @Test
+    void deactivatesPiercingModeAndLeavesInactiveModeUnchanged() {
+        GameModel game = new GameModel();
+        game.startNewGame();
+
+        game.deactivatePiercingBall();
+        assertFalse(game.isPiercingBallActive());
+
+        game.activatePiercingBall();
+        game.deactivatePiercingBall();
+        assertFalse(game.isPiercingBallActive());
+    }
+
+    @Test
+    void resetsPiercingModeForANewRun() {
+        GameModel game = new GameModel();
+        game.startNewGame();
+        game.activatePiercingBall();
+
+        game.startNewGame();
+
+        assertFalse(game.isPiercingBallActive());
     }
 }
