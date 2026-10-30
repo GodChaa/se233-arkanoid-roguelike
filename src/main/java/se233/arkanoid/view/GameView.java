@@ -95,8 +95,7 @@ public class GameView implements GameDisplay {
                 }
             }
 
-            for (int brickIndex = 0; brickIndex < bricks.size(); brickIndex++) {
-                Brick brick = bricks.get(brickIndex);
+            for (Brick brick : bricks) {
                 Animation animation = brickAnimations.get(brick);
                 if (brick.isDestroyed()) {
                     if (animation != null && !animation.isFinished(now)) {
@@ -107,7 +106,7 @@ public class GameView implements GameDisplay {
                     continue;
                 }
 
-                drawBrick(graphics, brick, brickIndex);
+                drawBrick(graphics, brick);
                 if (animation != null) {
                     if (animation.isFinished(now)) {
                         brickAnimations.remove(brick);
@@ -323,30 +322,46 @@ public class GameView implements GameDisplay {
 
     private void drawBrick(
             GraphicsContext graphics,
-            Brick brick,
-            int index
+            Brick brick
     ) {
         double brickWidth = brick.getWidth() - 4;
         double brickHeight = brick.getHeight() - 4;
-        Color typeColor = Color.web(brick.getType().getColorHex());
 
         if (isUsable(blockSheet)) {
-            int columns = Math.max(
-                    1,
-                    (int) blockSheet.getWidth() / 16
-            );
-            int sourceX = (index % columns) * 16;
+            int sourceX;
+            int sourceY;
+            switch (brick.getType()) {
+                case NORMAL -> {
+                    sourceX = 16;
+                    sourceY = 8;
+                }
+                case STRONG -> {
+                    sourceX = 0;
+                    sourceY = brick.getHitPoints() == 1 ? 24 : 16;
+                }
+                case BONUS -> {
+                    sourceX = 48;
+                    sourceY = 8;
+                }
+                case SPECIAL -> {
+                    sourceX = 32;
+                    sourceY = 8;
+                }
+                default -> throw new IllegalStateException(
+                        "No block sprite is mapped for " + brick.getType()
+                );
+            }
 
             graphics.drawImage(
                     blockSheet,
-                    sourceX, 0, 16, 8,
+                    sourceX, sourceY, 16, 8,
                     brick.getX(),
                     brick.getY(),
                     brickWidth,
                     brickHeight
             );
         } else {
-            graphics.setFill(typeColor);
+            graphics.setFill(Color.web(brick.getType().getColorHex()));
             graphics.fillRoundRect(
                     brick.getX(),
                     brick.getY(),
@@ -357,15 +372,6 @@ public class GameView implements GameDisplay {
             );
         }
 
-        // Keep the sprite pattern while showing each BrickType's visual cue.
-        graphics.setFill(typeColor);
-        graphics.fillRect(brick.getX(), brick.getY(), brickWidth, 4);
-        graphics.setFill(Color.WHITE);
-        graphics.fillText(
-                brick.getType().getSymbol(),
-                brick.getX() + brickWidth / 2 - 4,
-                brick.getY() + brickHeight / 2 + 4
-        );
     }
 
     private static Image loadImage(String path) {

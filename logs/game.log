@@ -1106,3 +1106,325 @@ Oct 30, 2026 5:34:33 PM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Oct 30, 2026 5:34:36 PM se233.arkanoid.controller.GameLogger warning
 WARNING: Player lost a life. Remaining lives: 0
+Oct 30, 2026 6:11:50 PM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Oct 30, 2026 6:11:52 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Oct 30, 2026 6:11:52 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:11:53 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 6:11:53 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 6:11:54 PM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Oct 30, 2026 6:11:55 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 6:11:55 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 6:11:55 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 20
+Oct 30, 2026 6:11:55 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:11:55 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 6:11:56 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 6:11:56 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 6:11:56 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 6:11:56 PM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Oct 30, 2026 6:12:00 PM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Oct 30, 2026 6:12:02 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 30
+Oct 30, 2026 6:12:02 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:03 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 2
+Oct 30, 2026 6:12:06 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 40
+Oct 30, 2026 6:12:06 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:06 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 50
+Oct 30, 2026 6:12:06 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:06 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 60
+Oct 30, 2026 6:12:06 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:07 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 70
+Oct 30, 2026 6:12:07 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:07 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 80
+Oct 30, 2026 6:12:07 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:08 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 90
+Oct 30, 2026 6:12:08 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:09 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 100
+Oct 30, 2026 6:12:09 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:10 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 150
+Oct 30, 2026 6:12:10 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:11 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 160
+Oct 30, 2026 6:12:11 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:12 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 170
+Oct 30, 2026 6:12:12 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:13 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 180
+Oct 30, 2026 6:12:13 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:14 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 190
+Oct 30, 2026 6:12:14 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:15 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 200
+Oct 30, 2026 6:12:15 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:15 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 210
+Oct 30, 2026 6:12:15 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:17 PM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Oct 30, 2026 6:12:20 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 220
+Oct 30, 2026 6:12:20 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:23 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 1
+Oct 30, 2026 6:12:25 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 230
+Oct 30, 2026 6:12:25 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:26 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 280
+Oct 30, 2026 6:12:26 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:30 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 0
+Oct 30, 2026 6:12:30 PM se233.arkanoid.controller.GameLogger error
+SEVERE: The game stopped because an error occurred.
+java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:365)
+	at java.base/java.util.ArrayList.get(ArrayList.java:428)
+	at se233.arkanoid.controller.GameController.updateGame(GameController.java:138)
+	at se233.arkanoid.controller.GameController.update(GameController.java:99)
+	at se233.arkanoid.controller.GameLoop.handle(GameLoop.java:27)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$0(AnimationTimer.java:58)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:138)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:57)
+	at com.sun.scenario.animation.AbstractPrimaryTimer.timePulseImpl(AbstractPrimaryTimer.java:356)
+	at com.sun.scenario.animation.AbstractPrimaryTimer$MainLoop.run(AbstractPrimaryTimer.java:266)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:580)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:564)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:557)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$11(QuantumToolkit.java:352)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+
+Oct 30, 2026 6:12:34 PM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Oct 30, 2026 6:12:36 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Oct 30, 2026 6:12:36 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:37 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 6:12:37 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 6:12:38 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 6:12:38 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 6:12:38 PM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Oct 30, 2026 6:12:38 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 6:12:38 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 6:12:40 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 20
+Oct 30, 2026 6:12:40 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:40 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 6:12:40 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 6:12:41 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 6:12:41 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 6:12:41 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 6:12:41 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 6:12:42 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 2
+Oct 30, 2026 6:12:45 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 30
+Oct 30, 2026 6:12:45 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:45 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 40
+Oct 30, 2026 6:12:45 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:45 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 50
+Oct 30, 2026 6:12:45 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:45 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 60
+Oct 30, 2026 6:12:45 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:46 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 70
+Oct 30, 2026 6:12:46 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:47 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 80
+Oct 30, 2026 6:12:47 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:48 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 90
+Oct 30, 2026 6:12:48 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:49 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 140
+Oct 30, 2026 6:12:49 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:50 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 150
+Oct 30, 2026 6:12:50 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:51 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 160
+Oct 30, 2026 6:12:51 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:52 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 170
+Oct 30, 2026 6:12:52 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:53 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 180
+Oct 30, 2026 6:12:53 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:54 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 190
+Oct 30, 2026 6:12:54 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:54 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 200
+Oct 30, 2026 6:12:54 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:12:55 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 6:12:56 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 1
+Oct 30, 2026 6:12:56 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 6:12:59 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 210
+Oct 30, 2026 6:12:59 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:13:00 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 260
+Oct 30, 2026 6:13:00 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:13:02 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 6:13:02 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 6:13:02 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 6:13:03 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 6:13:03 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 6:13:03 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 6:13:03 PM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Oct 30, 2026 6:13:03 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 6:13:04 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 6:13:05 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 270
+Oct 30, 2026 6:13:05 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:13:06 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 6:13:06 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 6:13:07 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 6:13:08 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 6:13:08 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 6:13:08 PM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Oct 30, 2026 6:13:08 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 6:13:08 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 6:13:09 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 6:13:09 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 6:13:10 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 6:13:10 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 280
+Oct 30, 2026 6:13:10 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 30, 2026 6:13:11 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 30, 2026 6:13:11 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 30, 2026 6:13:12 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 30, 2026 6:13:12 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 30, 2026 6:13:13 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 0
+Oct 30, 2026 6:13:13 PM se233.arkanoid.controller.GameLogger error
+SEVERE: The game stopped because an error occurred.
+java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:365)
+	at java.base/java.util.ArrayList.get(ArrayList.java:428)
+	at se233.arkanoid.controller.GameController.updateGame(GameController.java:138)
+	at se233.arkanoid.controller.GameController.update(GameController.java:99)
+	at se233.arkanoid.controller.GameLoop.handle(GameLoop.java:27)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$0(AnimationTimer.java:58)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:138)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:57)
+	at com.sun.scenario.animation.AbstractPrimaryTimer.timePulseImpl(AbstractPrimaryTimer.java:356)
+	at com.sun.scenario.animation.AbstractPrimaryTimer$MainLoop.run(AbstractPrimaryTimer.java:266)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:580)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:564)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:557)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$11(QuantumToolkit.java:352)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+
