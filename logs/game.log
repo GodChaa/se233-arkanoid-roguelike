@@ -1106,3 +1106,141 @@ Oct 30, 2026 5:34:33 PM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Oct 30, 2026 5:34:36 PM se233.arkanoid.controller.GameLogger warning
 WARNING: Player lost a life. Remaining lives: 0
+Oct 31, 2026 12:43:45 PM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Oct 31, 2026 12:43:45 PM se233.arkanoid.controller.GameLogger info
+INFO: Boss test game started. Boss health: 10
+Oct 31, 2026 12:43:46 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 25
+Oct 31, 2026 12:43:46 PM se233.arkanoid.controller.GameLogger info
+INFO: Boss hit. Health remaining: 9
+Oct 31, 2026 12:43:48 PM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Oct 31, 2026 12:43:49 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 50
+Oct 31, 2026 12:43:49 PM se233.arkanoid.controller.GameLogger info
+INFO: Boss hit. Health remaining: 8
+Oct 31, 2026 12:43:50 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 2
+Oct 31, 2026 12:45:52 PM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Oct 31, 2026 12:45:53 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Oct 31, 2026 12:45:53 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 31, 2026 12:45:55 PM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Oct 31, 2026 12:45:57 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 20
+Oct 31, 2026 12:45:57 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 31, 2026 12:45:59 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 2
+Oct 31, 2026 12:46:01 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key pressed.
+Oct 31, 2026 12:46:02 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 30
+Oct 31, 2026 12:46:02 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 31, 2026 12:46:02 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 40
+Oct 31, 2026 12:46:02 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 31, 2026 12:46:02 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 50
+Oct 31, 2026 12:46:02 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 31, 2026 12:46:02 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle left key released.
+Oct 31, 2026 12:46:02 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 60
+Oct 31, 2026 12:46:02 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 31, 2026 12:46:03 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 70
+Oct 31, 2026 12:46:03 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 31, 2026 12:46:06 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 1
+Oct 31, 2026 12:46:09 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 120
+Oct 31, 2026 12:46:09 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 31, 2026 12:46:10 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 130
+Oct 31, 2026 12:46:10 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 31, 2026 12:46:10 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key pressed.
+Oct 31, 2026 12:46:10 PM se233.arkanoid.controller.GameLogger action
+FINE: Paddle right key released.
+Oct 31, 2026 12:46:10 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 140
+Oct 31, 2026 12:46:10 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 31, 2026 12:46:11 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 150
+Oct 31, 2026 12:46:11 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 31, 2026 12:46:12 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 200
+Oct 31, 2026 12:46:12 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 31, 2026 12:46:13 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 210
+Oct 31, 2026 12:46:13 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 31, 2026 12:46:15 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 220
+Oct 31, 2026 12:46:15 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 31, 2026 12:46:16 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 230
+Oct 31, 2026 12:46:16 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 31, 2026 12:46:19 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 0
+Oct 31, 2026 12:46:19 PM se233.arkanoid.controller.GameLogger error
+SEVERE: The game stopped because an error occurred.
+java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:365)
+	at java.base/java.util.ArrayList.get(ArrayList.java:428)
+	at se233.arkanoid.controller.GameController.updateGame(GameController.java:138)
+	at se233.arkanoid.controller.GameController.update(GameController.java:99)
+	at se233.arkanoid.controller.GameLoop.handle(GameLoop.java:27)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$0(AnimationTimer.java:58)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:138)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:57)
+	at com.sun.scenario.animation.AbstractPrimaryTimer.timePulseImpl(AbstractPrimaryTimer.java:356)
+	at com.sun.scenario.animation.AbstractPrimaryTimer$MainLoop.run(AbstractPrimaryTimer.java:266)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:580)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:564)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:557)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$11(QuantumToolkit.java:352)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+
+Oct 31, 2026 12:46:21 PM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Oct 31, 2026 12:46:22 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Oct 31, 2026 12:46:22 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Oct 31, 2026 12:46:57 PM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Oct 31, 2026 12:46:57 PM se233.arkanoid.controller.GameLogger info
+INFO: Boss test game started. Boss health: 10
+Oct 31, 2026 12:46:59 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 25
+Oct 31, 2026 12:46:59 PM se233.arkanoid.controller.GameLogger info
+INFO: Boss hit. Health remaining: 9
+Oct 31, 2026 12:47:00 PM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Oct 31, 2026 12:47:01 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 50
+Oct 31, 2026 12:47:01 PM se233.arkanoid.controller.GameLogger info
+INFO: Boss hit. Health remaining: 8
+Oct 31, 2026 12:47:03 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 2
