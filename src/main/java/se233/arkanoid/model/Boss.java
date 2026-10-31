@@ -2,7 +2,6 @@ package se233.arkanoid.model;
 
 public final class Boss {
     public static final int DEFAULT_HEALTH = 10;
-    public static final double HIT_COOLDOWN_SECONDS = 0.35;
     public static final double WIDTH = 160;
     public static final double HEIGHT = 160;
     public static final double Y = 105;
@@ -14,7 +13,6 @@ public final class Boss {
     private int hitsTaken;
     private double x;
     private double velocityX = INITIAL_SPEED;
-    private double hitCooldown;
 
     public Boss(double fieldWidth) {
         if (!Double.isFinite(fieldWidth) || fieldWidth < WIDTH) {
@@ -30,7 +28,6 @@ public final class Boss {
         if (!Double.isFinite(fieldWidth) || fieldWidth < width) {
             throw new IllegalArgumentException("Field width must be finite and wide enough for the boss.");
         }
-        hitCooldown = Math.max(0, hitCooldown - elapsedSeconds);
         x += velocityX * elapsedSeconds;
         if (x < 0) {
             x = 0;
@@ -42,10 +39,9 @@ public final class Boss {
     }
 
     public boolean hit() {
-        if (isDefeated() || hitCooldown > 0) return false;
+        if (isDefeated()) return false;
         health--;
         hitsTaken++;
-        hitCooldown = HIT_COOLDOWN_SECONDS;
         if (hitsTaken % 3 == 0) velocityX = -velocityX * 1.3;
         return true;
     }

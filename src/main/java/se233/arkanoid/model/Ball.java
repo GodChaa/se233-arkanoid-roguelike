@@ -1,5 +1,7 @@
 package se233.arkanoid.model;
 
+import java.util.Objects;
+
 public class Ball {
     private double x;
     private double y;
@@ -27,6 +29,19 @@ public class Ball {
 
     public void bounceVertical() {
         velocityY = -velocityY;
+    }
+
+    public void bounceFromPaddle(Paddle paddle) {
+        Objects.requireNonNull(paddle, "Paddle cannot be null.");
+        double halfWidth = paddle.getWidth() / 2;
+        double paddleCenter = paddle.getX() + halfWidth;
+        double hitOffset = Math.max(-1, Math.min(1, (x - paddleCenter) / halfWidth));
+        double speed = Math.hypot(velocityX, velocityY);
+        if (speed == 0) return;
+
+        double angle = Math.toRadians(hitOffset * 60);
+        velocityX = speed * Math.sin(angle);
+        velocityY = -speed * Math.cos(angle);
     }
 
     public double getX() {

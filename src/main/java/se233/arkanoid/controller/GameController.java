@@ -166,7 +166,7 @@ public class GameController {
                 && activeBall.getY() - BALL_RADIUS <= GameView.PADDLE_Y + GameView.PADDLE_HEIGHT
                 && activeBall.getX() >= paddle.getX() && activeBall.getX() <= paddle.getX() + paddle.getWidth()) {
             activeBall.setPosition(activeBall.getX(), GameView.PADDLE_Y - BALL_RADIUS);
-            activeBall.bounceVertical();
+            activeBall.bounceFromPaddle(paddle);
             logger.action("Ball bounced off the paddle.");
         }
 

@@ -407,6 +407,34 @@ class GameControllerTest {
     }
 
     @Test
+    void twoBallsHittingTheBossInTheSameFrameRemoveTwoHealthSegments() {
+        Upgrade extraBall = upgrade("Extra ball", GameModel::addExtraBall);
+        Upgrade neutral = upgrade("Choice B", game -> {});
+        Harness harness = new Harness(new UpgradeManager(List.of(extraBall,
+                neutral, upgrade("Choice C", game -> {})), new Random(1)));
+        harness.controller.startNewGame();
+        clearCurrentStage(harness);
+        harness.controller.update(0);
+        harness.display.choose(extraBall);
+        for (int stage = 2; stage <= 4; stage++) {
+            clearCurrentStage(harness);
+            harness.controller.update(0);
+            harness.display.choose(neutral);
+        }
+        assertEquals(5, harness.display.stageNumber);
+        assertNotNull(harness.display.boss);
+        assertEquals(1, harness.display.extraBalls.size());
+
+        double impactX = harness.display.boss.getX() + harness.display.boss.getWidth() / 2;
+        double impactY = harness.display.boss.getY() + harness.display.boss.getHeight() + GameView.BALL_RADIUS;
+        harness.display.ball.setPosition(impactX, impactY);
+        harness.display.extraBalls.get(0).setPosition(impactX, impactY);
+        harness.controller.update(0);
+
+        assertEquals(Boss.DEFAULT_HEALTH - 2, harness.display.boss.getHealth());
+    }
+
+    @Test
     void bossAppearsAgainAtStageTen() {
         Harness harness = new Harness(new Random(1));
         harness.controller.startNewGame();

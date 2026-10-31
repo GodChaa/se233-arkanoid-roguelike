@@ -17,15 +17,11 @@ class BossTest {
     }
 
     @Test
-    void losesOneHealthPerAcceptedHitAndBrieflyRejectsRepeatedHits() {
+    void losesOneHealthForEachBallHit() {
         Boss boss = new Boss(640);
 
         assertTrue(boss.hit());
         assertEquals(9, boss.getHealth());
-        assertFalse(boss.hit());
-        assertEquals(9, boss.getHealth());
-
-        boss.update(Boss.HIT_COOLDOWN_SECONDS, 640);
         assertTrue(boss.hit());
         assertEquals(8, boss.getHealth());
     }
@@ -37,7 +33,6 @@ class BossTest {
 
         for (int hit = 0; hit < 3; hit++) {
             assertTrue(boss.hit());
-            if (hit < 2) boss.update(Boss.HIT_COOLDOWN_SECONDS, 640);
         }
 
         assertEquals(7, boss.getHealth());
