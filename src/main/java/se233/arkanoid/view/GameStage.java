@@ -13,19 +13,42 @@ public class GameStage extends Application {
         GameView view = new GameView();
         GameController controller = new GameController(view);
         GameLoop loop = new GameLoop(controller);
-        Scene scene = new Scene(view.getRoot(), GameView.WIDTH, GameView.HEIGHT + 40);
+
+        Scene scene = new Scene(
+                view.getRoot(),
+                GameView.WIDTH,
+                GameView.HEIGHT + 56
+        );
+
         scene.setOnKeyPressed(event -> {
-            if (event.getCode() == KeyCode.LEFT || event.getCode() == KeyCode.A) controller.setLeftPressed(true);
-            if (event.getCode() == KeyCode.RIGHT || event.getCode() == KeyCode.D) controller.setRightPressed(true);
+            if (event.getCode() == KeyCode.LEFT
+                    || event.getCode() == KeyCode.A) {
+                controller.setLeftPressed(true);
+            }
+
+            if (event.getCode() == KeyCode.RIGHT
+                    || event.getCode() == KeyCode.D) {
+                controller.setRightPressed(true);
+            }
         });
+
         scene.setOnKeyReleased(event -> {
-            if (event.getCode() == KeyCode.LEFT || event.getCode() == KeyCode.A) controller.setLeftPressed(false);
-            if (event.getCode() == KeyCode.RIGHT || event.getCode() == KeyCode.D) controller.setRightPressed(false);
+            if (event.getCode() == KeyCode.LEFT
+                    || event.getCode() == KeyCode.A) {
+                controller.setLeftPressed(false);
+            }
+
+            if (event.getCode() == KeyCode.RIGHT
+                    || event.getCode() == KeyCode.D) {
+                controller.setRightPressed(false);
+            }
         });
+
         stage.setTitle("Arkanoid Roguelike");
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
+
         loop.start();
         stage.setOnCloseRequest(event -> loop.stop());
     }

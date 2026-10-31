@@ -4,7 +4,7 @@ public final class Boss {
     public static final int DEFAULT_HEALTH = 10;
     public static final double HIT_COOLDOWN_SECONDS = 0.35;
     public static final double WIDTH = 160;
-    public static final double HEIGHT = 48;
+    public static final double HEIGHT = 160;
     public static final double Y = 105;
     private static final double INITIAL_SPEED = 110;
 

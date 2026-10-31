@@ -50,7 +50,7 @@ public class GameController {
         this.game = Objects.requireNonNull(game, "Game model cannot be null.");
         this.logger = Objects.requireNonNull(logger, "Logger cannot be null.");
         this.upgrades = Objects.requireNonNull(upgrades, "Upgrade manager cannot be null.");
-        view.showMenu(this::startNewGame);
+        view.showMenu(this::startBossTestGame);
         render();
     }
 
