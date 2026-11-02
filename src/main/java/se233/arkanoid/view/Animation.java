@@ -1,6 +1,7 @@
 package se233.arkanoid.view;
 
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import se233.arkanoid.model.Brick;
 
@@ -20,10 +21,20 @@ public final class Animation {
 
     private final long startedAtNanos;
     private final boolean destroyed;
+    private final Image[] impactFrames;
 
     public Animation(long startedAtNanos, boolean destroyed) {
+        this(startedAtNanos, destroyed, null);
+    }
+
+    public Animation(
+            long startedAtNanos,
+            boolean destroyed,
+            SpriteSheet effectsSheet
+    ) {
         this.startedAtNanos = startedAtNanos;
         this.destroyed = destroyed;
+        this.impactFrames = extractImpactFrames(effectsSheet);
     }
 
     public boolean isFinished(long nowNanos) {
@@ -52,6 +63,11 @@ public final class Animation {
 
         graphics.save();
         try {
+            if (impactFrames.length > 0) {
+                drawImpactSprite(graphics, brick, progress);
+                return;
+            }
+
             if (!destroyed) {
                 graphics.setGlobalAlpha(alpha * 0.9);
                 graphics.setFill(Color.WHITE);
@@ -97,5 +113,45 @@ public final class Animation {
         } finally {
             graphics.restore();
         }
+    }
+
+    private void drawImpactSprite(
+            GraphicsContext graphics,
+            Brick brick,
+            double progress
+    ) {
+        final int frameCount = 6;
+        int frame = Math.min(
+                frameCount - 1,
+                (int) (progress * frameCount)
+        );
+        double size = 36;
+        double centerX = brick.getX() + brick.getWidth() / 2.0;
+        double centerY = brick.getY() + brick.getHeight() / 2.0;
+
+        graphics.setGlobalAlpha(1.0 - progress);
+        graphics.drawImage(
+                impactFrames[frame],
+                centerX - size / 2.0,
+                centerY - size / 2.0,
+                size,
+                size
+        );
+    }
+
+    private static Image[] extractImpactFrames(SpriteSheet effectsSheet) {
+        if (effectsSheet == null
+                || effectsSheet.getImage().getWidth() < 96
+                || effectsSheet.getImage().getHeight() < 160) {
+            return new Image[0];
+        }
+
+        Image[] frames = new Image[6];
+        for (int frame = 0; frame < frames.length; frame++) {
+            frames[frame] = effectsSheet.getSprite(
+                    frame * 16, 144, 16, 16
+            );
+        }
+        return frames;
     }
 }

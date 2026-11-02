@@ -30,6 +30,9 @@ final class GameCanvasRenderer {
     private final Image fieldSheet = loadImage("/se233/arkanoid/assets/fields.png");
     private final Image vausSheet = loadVausSheet("/se233/arkanoid/assets/vaus.png");
     private final Image blockSheet = loadImage("/se233/arkanoid/assets/blocks.png");
+    private final Image effectsSheet = loadEffectsSheet(
+            "/se233/arkanoid/assets/Effects.png");
+    private final SpriteSheet effectsSprites = new SpriteSheet(effectsSheet);
     private final PaddleRenderer paddleRenderer = new PaddleRenderer(vausSheet);
     private final BallRenderer ballRenderer;
     private final BossRenderer bossRenderer = new BossRenderer(
@@ -45,7 +48,7 @@ final class GameCanvasRenderer {
 
     GameCanvasRenderer(Canvas canvas) {
         this.canvas = canvas;
-        this.ballRenderer = new BallRenderer(canvas);
+        this.ballRenderer = new BallRenderer(canvas, effectsSprites);
         drawBackground();
     }
 
@@ -84,7 +87,7 @@ final class GameCanvasRenderer {
                         && currentHitPoints < oldHitPoints) {
                     brickAnimations.put(
                             brick,
-                            new Animation(now, brick.isDestroyed())
+                            new Animation(now, brick.isDestroyed(), effectsSprites)
                     );
                 }
             }
@@ -306,6 +309,54 @@ private static Image loadVausSheet(String path) {
         }
         return keyedImage;
     }
+
+private static Image loadEffectsSheet(String path) {
+        Image source = loadImage(path);
+        if (!isUsable(source)) {
+            return source;
+        }
+
+        WritableImage keyedImage = new WritableImage(
+                (int) source.getWidth(),
+                (int) source.getHeight()
+        );
+        var reader = source.getPixelReader();
+        var writer = keyedImage.getPixelWriter();
+
+        for (int y = 0; y < source.getHeight(); y++) {
+            for (int x = 0; x < source.getWidth(); x++) {
+                Color pixel = reader.getColor(x, y);
+                boolean oliveBackground = isColorKey(
+                        pixel, 171, 160, 0
+                ) || isColorKey(pixel, 91, 85, 0);
+                boolean purpleBackground = isColorKey(
+                        pixel, 146, 39, 143
+                );
+                writer.setColor(
+                        x,
+                        y,
+                        oliveBackground || purpleBackground
+                                ? Color.TRANSPARENT
+                                : pixel
+                );
+            }
+        }
+
+        return keyedImage;
+    }
+
+private static boolean isColorKey(
+        Color color,
+        int red,
+        int green,
+        int blue
+) {
+        double tolerance = 2.0 / 255.0;
+        return Math.abs(color.getRed() - red / 255.0) <= tolerance
+                && Math.abs(color.getGreen() - green / 255.0) <= tolerance
+                && Math.abs(color.getBlue() - blue / 255.0) <= tolerance;
+    }
+
 private static Image loadImage(String path) {
         try (var stream =
                      GameView.class.getResourceAsStream(path)) {
