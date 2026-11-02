@@ -44,15 +44,15 @@ class GameControllerTest {
 
     @Test
     @Order(2)
-    void startMenuActionStartsTheConfiguredBossTestRun() {
+    void startMenuActionStartsANewRun() {
         Harness harness = new Harness(new Random(1));
 
         harness.display.startAction.run();
 
         assertEquals(GameState.PLAYING, harness.controller.getGame().getState());
         assertEquals(3, harness.controller.getGame().getLives());
-        assertEquals(5, harness.display.stageNumber);
-        assertTrue(harness.display.stage.getBricks().isEmpty());
+        assertEquals(1, harness.display.stageNumber);
+        assertEquals(26, harness.display.stage.getBricks().size());
     }
 
     @Test
@@ -360,7 +360,7 @@ class GameControllerTest {
 
     @Test
     @Order(20)
-    void piercingBallStaysActiveAtTheTopWallUntilItHitsABrick() {
+    void piercingBallDeactivatesWhenItHitsTheTopWall() {
         Harness harness = new Harness(new Random(1));
         harness.controller.startNewGame();
         harness.controller.getGame().activatePiercingBall();
@@ -368,12 +368,12 @@ class GameControllerTest {
 
         harness.controller.update(0.05);
 
-        assertTrue(harness.controller.getGame().isPiercingBallActive());
+        assertFalse(harness.controller.getGame().isPiercingBallActive());
         assertTrue(harness.display.ball.getVelocityY() > 0);
     }
 
     @Test
-    void piercingBallEndsAtTheNextWallAfterBreakingABrick() {
+    void piercingBallRemainsActiveAtSideWallAndEndsAtTopAfterBreakingABrick() {
         Harness harness = new Harness(new Random(1));
         harness.controller.startNewGame();
         harness.controller.getGame().activatePiercingBall();
@@ -389,7 +389,30 @@ class GameControllerTest {
 
         harness.controller.update(0.05);
 
+        assertTrue(harness.controller.getGame().isPiercingBallActive());
+        assertTrue(harness.display.ball.getVelocityX() < 0);
+        harness.display.ball.setPosition(320, 5);
+
+        harness.controller.update(0.05);
+
         assertFalse(harness.controller.getGame().isPiercingBallActive());
+    }
+
+    @Test
+    void piercingBallRemainsActiveWhenItFallsPastTheBottomBoundary() {
+        Harness harness = new Harness(new Random(1));
+        harness.controller.startNewGame();
+        harness.controller.getGame().activatePiercingBall();
+        Brick brick = harness.display.stage.getBricks().get(0);
+        harness.display.ball.setPosition(brick.getX() + 35,
+                brick.getY() + brick.getHeight() + 12);
+        harness.controller.update(0.05);
+
+        harness.display.ball.setPosition(320, GameView.HEIGHT + GameView.BALL_RADIUS + 20);
+        harness.controller.update(0.05);
+
+        assertEquals(2, harness.controller.getGame().getLives());
+        assertTrue(harness.controller.getGame().isPiercingBallActive());
     }
 
     @Test

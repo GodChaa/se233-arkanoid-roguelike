@@ -52,7 +52,7 @@ public class GameController {
         this.game = Objects.requireNonNull(game, "Game model cannot be null.");
         this.logger = Objects.requireNonNull(logger, "Logger cannot be null.");
         this.upgrades = Objects.requireNonNull(upgrades, "Upgrade manager cannot be null.");
-        view.showMenu(this::startBossTestGame);
+        view.showMenu(this::startNewGame);
         render();
     }
 
@@ -197,7 +197,6 @@ public class GameController {
             return;
         }
         if (survivors.isEmpty()) {
-            if (game.isPiercingBallActive()) deactivatePiercingAtBoundary("bottom boundary");
             game.loseLife();
             logger.warning("Player lost a life. Remaining lives: " + game.getLives());
             if (game.getState() == GameState.PLAYING) {
@@ -223,20 +222,18 @@ public class GameController {
 
     private boolean updateBall(Ball activeBall, double elapsed) {
         activeBall.move(elapsed);
-        boolean piercingHitBoundary = false;
+        boolean piercingHitTopBoundary = false;
         if (activeBall.getX() < BALL_RADIUS && activeBall.getVelocityX() < 0) {
             activeBall.setPosition(BALL_RADIUS, activeBall.getY());
             activeBall.bounceHorizontal();
-            piercingHitBoundary = game.isPiercingBallActive();
         } else if (activeBall.getX() > FIELD_WIDTH - BALL_RADIUS && activeBall.getVelocityX() > 0) {
             activeBall.setPosition(FIELD_WIDTH - BALL_RADIUS, activeBall.getY());
             activeBall.bounceHorizontal();
-            piercingHitBoundary = game.isPiercingBallActive();
         }
         if (activeBall.getY() < BALL_RADIUS && activeBall.getVelocityY() < 0) {
             activeBall.setPosition(activeBall.getX(), BALL_RADIUS);
             activeBall.bounceVertical();
-            piercingHitBoundary = game.isPiercingBallActive();
+            piercingHitTopBoundary = game.isPiercingBallActive();
         }
 
         if (activeBall.getVelocityY() > 0 && activeBall.getY() + BALL_RADIUS >= GameView.PADDLE_Y
@@ -248,7 +245,6 @@ public class GameController {
         }
 
         if (activeBall.getY() - BALL_RADIUS > FIELD_HEIGHT) {
-            deactivatePiercingAtBoundary("bottom boundary");
             return false;
         }
 
@@ -257,8 +253,8 @@ public class GameController {
         } else {
             handleBossCollision();
         }
-        if (piercingHitBoundary) {
-            deactivatePiercingAtBoundary("playfield boundary");
+        if (piercingHitTopBoundary) {
+            deactivatePiercingAtTopBoundary();
         }
         return true;
     }
@@ -419,10 +415,10 @@ public class GameController {
         view.renderExtraBalls(List.copyOf(extraBalls));
     }
 
-    private void deactivatePiercingAtBoundary(String boundary) {
-        if (game.isPiercingBallActive() && game.hasPiercingBallHitBrick()) {
+    private void deactivatePiercingAtTopBoundary() {
+        if (game.isPiercingBallActive()) {
             game.deactivatePiercingBall();
-            logger.info("Piercing ball ended at the " + boundary + ".");
+            logger.info("Piercing ball ended at the top boundary.");
         }
     }
 
