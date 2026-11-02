@@ -1,7 +1,7 @@
 # Maven / Java
 target/
 *.class
-
+.game.log
 # IntelliJ
 .idea/
 *.iml

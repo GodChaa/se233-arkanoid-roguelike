@@ -7,7 +7,6 @@ import se233.arkanoid.model.Paddle;
 
 import java.util.Random;
 
-/** Draws the paddle and its visual upgrade effects. */
 final class PaddleRenderer {
     private static final int VAUS_SHEET_X_OFFSET = 16;
     private final Image vausSheet;
