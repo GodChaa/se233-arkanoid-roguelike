@@ -6,6 +6,7 @@ public final class Boss {
     public static final double HEIGHT = 160;
     public static final double Y = 105;
     private static final double INITIAL_SPEED = 110;
+    private static final double SHOT_INTERVAL_SECONDS = 1.6;
 
     private final double width = WIDTH;
     private final double height = HEIGHT;
@@ -13,6 +14,7 @@ public final class Boss {
     private int hitsTaken;
     private double x;
     private double velocityX = INITIAL_SPEED;
+    private double secondsUntilNextShot = 0.9;
 
     public Boss(double fieldWidth) {
         if (!Double.isFinite(fieldWidth) || fieldWidth < WIDTH) {
@@ -36,6 +38,21 @@ public final class Boss {
             x = fieldWidth - width;
             velocityX = -Math.abs(velocityX);
         }
+    }
+
+    public BossProjectile updateAndMaybeFire(
+            double elapsedSeconds,
+            double fieldWidth,
+            double targetX,
+            double targetY
+    ) {
+        update(elapsedSeconds, fieldWidth);
+        secondsUntilNextShot -= elapsedSeconds;
+        if (secondsUntilNextShot > 0) {
+            return null;
+        }
+        secondsUntilNextShot += SHOT_INTERVAL_SECONDS;
+        return new BossProjectile(x + width / 2, Y + height, targetX, targetY);
     }
 
     public boolean hit() {

@@ -129,11 +129,6 @@ public class GameModel {
         state = GameState.PLAYING;
     }
 
-    public void win() {
-        requireState(GameState.PLAYING, "A run can only be won while playing.");
-        state = GameState.VICTORY;
-    }
-
     public int getLives() {
         return lives;
     }

@@ -3,6 +3,8 @@ package se233.arkanoid.model;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class BrickTypeTest {
     @Test
@@ -25,5 +27,22 @@ class BrickTypeTest {
         assertEquals(2, brick.getHitPoints());
         assertEquals(20, brick.getScoreValue());
         assertEquals(70, brick.getWidth());
+    }
+
+    @Test
+    void exposesSymbolsAndColorsForEveryType() {
+        assertEquals("N", BrickType.NORMAL.getSymbol());
+        assertEquals("S", BrickType.STRONG.getSymbol());
+        assertEquals("#facc15", BrickType.BONUS.getColorHex());
+        assertEquals("#c084fc", BrickType.SPECIAL.getColorHex());
+    }
+
+    @Test
+    void allEnumValuesHaveValidDurabilityAndNonNegativeScoring() {
+        for (BrickType type : BrickType.values()) {
+            assertTrue(type.getHitPoints() > 0);
+            assertTrue(type.getScoreValue() >= 0);
+            assertFalse(type.getColorHex().isBlank());
+        }
     }
 }

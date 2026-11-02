@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class GameModelTest {
@@ -173,5 +174,93 @@ class GameModelTest {
         game.startNewGame();
 
         assertFalse(game.isPiercingBallActive());
+    }
+
+    @Test
+    void rejectsNegativeScoresAndScoringOutsideAPlayingRun() {
+        GameModel game = new GameModel();
+        assertThrows(IllegalStateException.class, () -> game.addScore(1));
+        game.startNewGame();
+        assertThrows(IllegalArgumentException.class, () -> game.addScore(-1));
+    }
+
+    @Test
+    void addsLivesDuringPlayingOrUpgradeAndRejectsOtherStates() {
+        GameModel game = new GameModel();
+        assertThrows(IllegalStateException.class, game::addLife);
+        game.startNewGame();
+        game.completeStage();
+        game.addLife();
+        assertEquals(4, game.getLives());
+    }
+
+    @Test
+    void appliesPaddleWidthAndSpeedBonusesAndValidatesInputs() {
+        GameModel game = new GameModel();
+        game.increasePaddleWidth(25);
+        game.increasePaddleSpeed(80);
+        assertEquals(25, game.getPaddleWidthBonus());
+        assertEquals(80, game.getPaddleSpeedBonus());
+        assertThrows(IllegalArgumentException.class, () -> game.increasePaddleWidth(-1));
+        assertThrows(IllegalArgumentException.class, () -> game.increasePaddleSpeed(Double.NaN));
+    }
+
+    @Test
+    void appliesBallAndScoreMultipliersAndValidatesInputs() {
+        GameModel game = new GameModel();
+        game.multiplyBallSpeed(1.1);
+        game.multiplyBrickScore(1.5);
+        assertEquals(1.1, game.getBallSpeedMultiplier(), 0.0001);
+        assertEquals(1.5, game.getBrickScoreMultiplier(), 0.0001);
+        assertThrows(IllegalArgumentException.class, () -> game.multiplyBallSpeed(0));
+        assertThrows(IllegalArgumentException.class, () -> game.multiplyBrickScore(Double.NaN));
+    }
+
+    @Test
+    void extraBallCanBeAddedDuringARunAndIsResetForTheNextRun() {
+        GameModel game = new GameModel();
+        assertThrows(IllegalStateException.class, game::addExtraBall);
+        game.startNewGame();
+        game.addExtraBall();
+        assertEquals(1, game.getExtraBallCount());
+        game.startNewGame();
+        assertEquals(0, game.getExtraBallCount());
+    }
+
+    @Test
+    void selectUpgradeAppliesItAndRequiresUpgradeStateAndNonNullUpgrade() {
+        GameModel game = new GameModel();
+        game.startNewGame();
+        assertThrows(IllegalStateException.class, () -> game.selectUpgrade(new Upgrade()));
+        game.completeStage();
+        assertThrows(IllegalArgumentException.class, () -> game.selectUpgrade(null));
+        game.selectUpgrade(new Upgrade("extra", "life") {
+            @Override public void apply(GameModel target) { target.addLife(); }
+        });
+        assertEquals(GameState.PLAYING, game.getState());
+        assertEquals(4, game.getLives());
+    }
+
+    @Test
+    void gettersExposeStateAndUpgradeValuesAfterUpdates() {
+        GameModel game = new GameModel();
+        game.startNewGame();
+        game.increasePaddleWidth(10);
+        game.increasePaddleSpeed(20);
+        game.multiplyBallSpeed(1.2);
+        game.multiplyBrickScore(1.3);
+        game.addExtraBall();
+        game.activatePiercingBall();
+        game.hitBrick(new Brick(1, 5));
+        assertEquals(3, game.getLives());
+        assertEquals(7, game.getScore());
+        assertEquals(GameState.PLAYING, game.getState());
+        assertEquals(10, game.getPaddleWidthBonus());
+        assertEquals(20, game.getPaddleSpeedBonus());
+        assertEquals(1.2, game.getBallSpeedMultiplier(), 0.0001);
+        assertEquals(1.3, game.getBrickScoreMultiplier(), 0.0001);
+        assertEquals(1, game.getExtraBallCount());
+        assertTrue(game.isPiercingBallActive());
+        assertTrue(game.hasPiercingBallHitBrick());
     }
 }

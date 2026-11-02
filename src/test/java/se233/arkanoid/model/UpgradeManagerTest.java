@@ -7,6 +7,7 @@ import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class UpgradeManagerTest {
@@ -58,5 +59,46 @@ class UpgradeManagerTest {
         manager.reset();
 
         assertTrue(manager.contains(longPaddle));
+    }
+
+    @Test
+    void constructorRejectsNullEmptyAndNullContainingPools() {
+        assertThrows(NullPointerException.class, () -> new UpgradeManager(null, new Random(1)));
+        assertThrows(IllegalArgumentException.class,
+                () -> new UpgradeManager(List.of(), new Random(1)));
+        assertThrows(IllegalArgumentException.class,
+                () -> new UpgradeManager(java.util.Arrays.asList(new Upgrade(), null), new Random(1)));
+    }
+
+    @Test
+    void getChoicesSupportsZeroAndRejectsCountsOutsidePoolSize() {
+        UpgradeManager manager = new UpgradeManager(List.of(new Upgrade(), new Upgrade()), new Random(1));
+        assertTrue(manager.getChoices(0).isEmpty());
+        assertThrows(IllegalArgumentException.class, () -> manager.getChoices(-1));
+        assertThrows(IllegalArgumentException.class, () -> manager.getChoices(3));
+    }
+
+    @Test
+    void applyRejectsUnavailableUpgradesAndNullInputs() {
+        Upgrade upgrade = new Upgrade();
+        UpgradeManager manager = new UpgradeManager(List.of(upgrade), new Random(1));
+        GameModel game = new GameModel();
+        game.startNewGame();
+        assertThrows(NullPointerException.class, () -> manager.apply(null, game));
+        assertThrows(NullPointerException.class, () -> manager.apply(upgrade, null));
+        assertThrows(IllegalArgumentException.class, () -> manager.apply(new Upgrade(), game));
+    }
+
+    @Test
+    void containsAndRemoveTrackItemsAcrossRemovalAndReset() {
+        Upgrade first = new Upgrade("first", "first");
+        Upgrade second = new Upgrade("second", "second");
+        UpgradeManager manager = new UpgradeManager(List.of(first, second), new Random(1));
+        assertTrue(manager.contains(first));
+        manager.remove(first);
+        assertFalse(manager.contains(first));
+        manager.reset();
+        assertTrue(manager.contains(first));
+        assertTrue(manager.contains(second));
     }
 }

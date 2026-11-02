@@ -2,6 +2,7 @@ package se233.arkanoid.controller;
 
 import se233.arkanoid.model.Ball;
 import se233.arkanoid.model.Boss;
+import se233.arkanoid.model.BossProjectile;
 import se233.arkanoid.model.Brick;
 import se233.arkanoid.model.BrickType;
 import se233.arkanoid.model.GameModel;
@@ -15,6 +16,7 @@ import se233.arkanoid.view.GameView;
 import se233.arkanoid.view.GameDisplay;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 import java.util.Random;
@@ -33,6 +35,7 @@ public class GameController {
     private Paddle paddle;
     private Ball ball;
     private final List<Ball> extraBalls = new ArrayList<>();
+    private final List<BossProjectile> bossProjectiles = new ArrayList<>();
     private boolean leftPressed;
     private boolean rightPressed;
 
@@ -49,7 +52,7 @@ public class GameController {
         this.game = Objects.requireNonNull(game, "Game model cannot be null.");
         this.logger = Objects.requireNonNull(logger, "Logger cannot be null.");
         this.upgrades = Objects.requireNonNull(upgrades, "Upgrade manager cannot be null.");
-        view.showMenu(this::startUpgradeTestGame);
+        view.showMenu(this::startNewGame);
         render();
     }
 
@@ -60,6 +63,7 @@ public class GameController {
             stageController.startNewRun();
             boss = null;
             extraBalls.clear();
+            bossProjectiles.clear();
             paddle = new Paddle((FIELD_WIDTH - 100) / 2, 100, 420, FIELD_WIDTH);
             view.resetPaddleSprite();
             ball = createBall();
@@ -74,14 +78,14 @@ public class GameController {
     }
 
     public void startUpgradeTestGame() {
-        boolean longPaddle = false;
-        boolean quickPaddle = false;
-        boolean extraLife = false;
+        boolean longPaddle = true;
+        boolean quickPaddle = true;
+        boolean extraLife = true;
         int extraBallsToAdd = 0;
         boolean fastBall = false;
         boolean slowBall = false;
         boolean scoreBonus = false;
-        boolean piercingBall = false;
+        boolean piercingBall = true;
 
         startNewGame();
         if (game.getState() != GameState.PLAYING || paddle == null
@@ -161,7 +165,23 @@ public class GameController {
         double elapsed = Math.min(Math.max(elapsedSeconds, 0), 0.05);
         if (leftPressed) paddle.moveLeft(elapsed);
         if (rightPressed) paddle.moveRight(elapsed);
-        if (boss != null) boss.update(elapsed, FIELD_WIDTH);
+        if (boss != null) {
+            BossProjectile fired = boss.updateAndMaybeFire(
+                    elapsed,
+                    FIELD_WIDTH,
+                    paddle.getX() + paddle.getWidth() / 2,
+                    GameView.PADDLE_Y
+            );
+            if (fired != null) {
+                bossProjectiles.add(fired);
+                logger.action("Boss fired a projectile.");
+            }
+        }
+        updateBossProjectiles(elapsed);
+        if (game.getState() != GameState.PLAYING) {
+            finishGameOver();
+            return;
+        }
 
         List<Ball> activeBalls = new ArrayList<>();
         activeBalls.add(ball);
@@ -187,9 +207,7 @@ public class GameController {
                     survivors.add(createExtraBall(index));
                 }
             } else {
-                render();
-                view.showGameOverAnimation(() -> view.showEnd(
-                        "GAME OVER", "Final score: " + game.getScore(), this::startNewGame));
+                finishGameOver();
                 return;
             }
         }
@@ -247,6 +265,32 @@ public class GameController {
 
     public GameModel getGame() { return game; }
 
+    private void updateBossProjectiles(double elapsedSeconds) {
+        Iterator<BossProjectile> iterator = bossProjectiles.iterator();
+        while (iterator.hasNext()) {
+            BossProjectile projectile = iterator.next();
+            projectile.update(elapsedSeconds);
+            if (projectile.intersects(paddle, GameView.PADDLE_Y, GameView.PADDLE_HEIGHT)) {
+                game.loseLife();
+                logger.warning("Boss projectile hit the paddle. Remaining lives: " + game.getLives());
+                iterator.remove();
+                if (game.getState() != GameState.PLAYING) {
+                    bossProjectiles.clear();
+                    return;
+                }
+            } else if (projectile.isOutside(FIELD_WIDTH, FIELD_HEIGHT)) {
+                iterator.remove();
+            }
+        }
+    }
+
+    private void finishGameOver() {
+        bossProjectiles.clear();
+        render();
+        view.showGameOverAnimation(() -> view.showEnd(
+                "GAME OVER", "Final score: " + game.getScore(), this::startNewGame));
+    }
+
     private void handleBrickCollision() {
         for (Brick brick : stageController.getCurrentStage().getBricks()) {
             if (brick.isDestroyed()) continue;
@@ -291,6 +335,7 @@ public class GameController {
                 logger.score(game.getScore());
                 logger.info("Boss defeated at stage " + stageController.getCurrentStageNumber() + ".");
                 boss = null;
+                bossProjectiles.clear();
                 completeCurrentStage();
                 return;
             }
@@ -368,6 +413,7 @@ public class GameController {
 
     private void render() {
         view.setPiercingBallActive(game.isPiercingBallActive());
+        view.renderBossProjectiles(List.copyOf(bossProjectiles));
         view.render(ball, paddle, stageController.getCurrentStage(), boss, game.getScore(),
                 game.getLives(), stageController.getCurrentStageNumber());
         view.renderExtraBalls(List.copyOf(extraBalls));

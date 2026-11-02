@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import se233.arkanoid.model.Ball;
+import se233.arkanoid.model.BossProjectile;
 import se233.arkanoid.model.Brick;
 import se233.arkanoid.model.BrickType;
 import se233.arkanoid.model.Boss;
@@ -79,6 +80,63 @@ class GameControllerTest {
         assertEquals(Boss.DEFAULT_HEALTH, harness.display.boss.getHealth());
         assertNotNull(harness.display.ball);
         assertNotNull(harness.display.paddle);
+    }
+
+    @Test
+    void startUpgradeTestGameStartsAtStageOneWithDefaultOptionsDisabled() {
+        Harness harness = new Harness(new Random(1));
+
+        harness.controller.startUpgradeTestGame();
+
+        assertEquals(GameState.PLAYING, harness.controller.getGame().getState());
+        assertEquals(1, harness.display.stageNumber);
+        assertEquals(4, harness.display.lives);
+        assertTrue(harness.display.extraBalls.isEmpty());
+    }
+
+    @Test
+    void startUpgradeTestGameStartsAFreshRun() {
+        Harness harness = new Harness(new Random(1));
+        harness.controller.startNewGame();
+        harness.controller.getGame().addScore(90);
+        harness.controller.getGame().loseLife();
+
+        harness.controller.startUpgradeTestGame();
+
+        assertEquals(0, harness.controller.getGame().getScore());
+        assertEquals(4, harness.controller.getGame().getLives());
+        assertEquals(1, harness.display.stageNumber);
+    }
+
+    @Test
+    void bossProjectileCostsOneLifeWhenItHitsThePaddle() {
+        Harness harness = new Harness(new Random(1));
+        harness.controller.startBossTestGame();
+
+        for (int frame = 0; frame < 60; frame++) {
+            harness.controller.update(0.05);
+        }
+
+        assertEquals(2, harness.controller.getGame().getLives());
+        assertTrue(harness.logger.warnings.stream()
+                .anyMatch(message -> message.contains("Boss projectile hit")));
+    }
+
+    @Test
+    void bossProjectileCanBeDodgedByMovingThePaddle() {
+        Harness harness = new Harness(new Random(1));
+        harness.controller.startBossTestGame();
+
+        for (int frame = 0; frame < 18; frame++) {
+            harness.controller.update(0.05);
+        }
+        harness.controller.setRightPressed(true);
+        for (int frame = 0; frame < 25; frame++) {
+            harness.controller.update(0.05);
+        }
+        harness.controller.setRightPressed(false);
+
+        assertEquals(3, harness.controller.getGame().getLives());
     }
 
     @Test
@@ -702,6 +760,7 @@ class GameControllerTest {
         private Consumer<Upgrade> upgradeAction;
         private List<Upgrade> upgradeChoices = List.of();
         private List<Ball> extraBalls = List.of();
+        private List<BossProjectile> bossProjectiles = List.of();
         private Ball ball;
         private Paddle paddle;
         private Stage stage;
@@ -729,6 +788,9 @@ class GameControllerTest {
         }
 
         @Override public void renderExtraBalls(List<Ball> balls) { extraBalls = List.copyOf(balls); }
+        @Override public void renderBossProjectiles(List<BossProjectile> projectiles) {
+            bossProjectiles = List.copyOf(projectiles);
+        }
 
         @Override public void showUpgradeChoices(List<Upgrade> choices, Consumer<Upgrade> onSelect) {
             upgradeChoices = choices;

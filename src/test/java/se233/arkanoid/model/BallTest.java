@@ -3,6 +3,7 @@ package se233.arkanoid.model;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class BallTest {
@@ -64,5 +65,50 @@ class BallTest {
         assertTrue(rightHit.getVelocityY() < 0);
         assertEquals(Math.tan(Math.toRadians(60)),
                 Math.abs(rightHit.getVelocityX() / rightHit.getVelocityY()), 0.0001);
+    }
+
+    @Test
+    void constructorAndGettersPreserveInitialState() {
+        Ball ball = new Ball(12, 34, -5, 6);
+        assertEquals(12, ball.getX());
+        assertEquals(34, ball.getY());
+        assertEquals(-5, ball.getVelocityX());
+        assertEquals(6, ball.getVelocityY());
+    }
+
+    @Test
+    void moveRejectsInvalidElapsedTime() {
+        Ball ball = new Ball(0, 0, 1, 1);
+        assertThrows(IllegalArgumentException.class, () -> ball.move(-1));
+        assertThrows(IllegalArgumentException.class, () -> ball.move(Double.NaN));
+    }
+
+    @Test
+    void setPositionUpdatesCoordinatesAndRejectsNonFiniteValues() {
+        Ball ball = new Ball(0, 0, 1, 1);
+        ball.setPosition(20, 30);
+        assertEquals(20, ball.getX());
+        assertEquals(30, ball.getY());
+        assertThrows(IllegalArgumentException.class, () -> ball.setPosition(Double.NaN, 0));
+        assertThrows(IllegalArgumentException.class, () -> ball.setPosition(0, Double.POSITIVE_INFINITY));
+    }
+
+    @Test
+    void multiplySpeedChangesBothComponentsAndRejectsInvalidFactors() {
+        Ball ball = new Ball(0, 0, 3, -4);
+        ball.multiplySpeed(2);
+        assertEquals(6, ball.getVelocityX());
+        assertEquals(-8, ball.getVelocityY());
+        assertThrows(IllegalArgumentException.class, () -> ball.multiplySpeed(0));
+        assertThrows(IllegalArgumentException.class, () -> ball.multiplySpeed(Double.NaN));
+    }
+
+    @Test
+    void bounceFromPaddleRejectsNullAndKeepsAStationaryBallStationary() {
+        Ball ball = new Ball(0, 0, 0, 0);
+        assertThrows(NullPointerException.class, () -> ball.bounceFromPaddle(null));
+        ball.bounceFromPaddle(new Paddle(0, 100, 100, 200));
+        assertEquals(0, ball.getVelocityX());
+        assertEquals(0, ball.getVelocityY());
     }
 }
