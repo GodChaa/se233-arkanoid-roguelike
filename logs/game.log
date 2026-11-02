@@ -8410,10 +8410,6 @@ Nov 02, 2026 11:49:59 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 02, 2026 11:49:59 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
-Nov 02, 2026 11:49:59 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key pressed.
-Nov 02, 2026 11:49:59 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key released.
 Nov 02, 2026 11:50:00 PM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
 Nov 02, 2026 11:50:00 PM se233.arkanoid.controller.GameLogger action
@@ -8430,8 +8426,6 @@ Nov 02, 2026 11:50:02 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
 Nov 02, 2026 11:50:02 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
-Nov 02, 2026 11:50:02 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
 Nov 02, 2026 11:50:02 PM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
 Nov 02, 2026 11:50:04 PM se233.arkanoid.controller.GameLogger score
@@ -8464,20 +8458,12 @@ Nov 02, 2026 11:50:07 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 02, 2026 11:50:07 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
-Nov 02, 2026 11:50:07 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
-Nov 02, 2026 11:50:07 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
 Nov 02, 2026 11:50:08 PM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
 Nov 02, 2026 11:50:09 PM se233.arkanoid.controller.GameLogger score
 INFO: Score: 50
 Nov 02, 2026 11:50:09 PM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
-Nov 02, 2026 11:50:10 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key pressed.
-Nov 02, 2026 11:50:10 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key released.
 Nov 02, 2026 11:50:10 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 02, 2026 11:50:10 PM se233.arkanoid.controller.GameLogger action
@@ -8490,10 +8476,6 @@ Nov 02, 2026 11:50:12 PM se233.arkanoid.controller.GameLogger score
 INFO: Score: 60
 Nov 02, 2026 11:50:12 PM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
-Nov 02, 2026 11:50:12 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
-Nov 02, 2026 11:50:12 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
 Nov 02, 2026 11:50:12 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
 Nov 02, 2026 11:50:13 PM se233.arkanoid.controller.GameLogger action
@@ -8510,24 +8492,12 @@ Nov 02, 2026 11:50:15 PM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 02, 2026 11:50:15 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
-Nov 02, 2026 11:50:15 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key pressed.
-Nov 02, 2026 11:50:15 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key released.
-Nov 02, 2026 11:50:15 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key pressed.
-Nov 02, 2026 11:50:15 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key released.
 Nov 02, 2026 11:50:16 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 02, 2026 11:50:16 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
-Nov 02, 2026 11:50:16 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key pressed.
 Nov 02, 2026 11:50:16 PM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
-Nov 02, 2026 11:50:16 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key released.
 Nov 02, 2026 11:50:18 PM se233.arkanoid.controller.GameLogger score
 INFO: Score: 120
 Nov 02, 2026 11:50:18 PM se233.arkanoid.controller.GameLogger action
@@ -8541,17 +8511,11 @@ FINE: Paddle right key pressed.
 Nov 02, 2026 11:50:19 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
 Nov 02, 2026 11:50:19 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
-Nov 02, 2026 11:50:19 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
-Nov 02, 2026 11:50:19 PM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
 Nov 02, 2026 11:50:20 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 02, 2026 11:50:20 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
-Nov 02, 2026 11:50:20 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
 Nov 02, 2026 11:50:21 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
 Nov 02, 2026 11:50:22 PM se233.arkanoid.controller.GameLogger score
@@ -8564,16 +8528,12 @@ Nov 02, 2026 11:50:23 PM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 02, 2026 11:50:23 PM se233.arkanoid.controller.GameLogger score
 INFO: Score: 150
-Nov 02, 2026 11:50:23 PM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 02, 2026 11:50:24 PM se233.arkanoid.controller.GameLogger score
 INFO: Score: 160
 Nov 02, 2026 11:50:24 PM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 02, 2026 11:50:24 PM se233.arkanoid.controller.GameLogger score
 INFO: Score: 170
-Nov 02, 2026 11:50:24 PM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 02, 2026 11:50:25 PM se233.arkanoid.controller.GameLogger score
 INFO: Score: 180
 Nov 02, 2026 11:50:25 PM se233.arkanoid.controller.GameLogger action
@@ -8590,8 +8550,6 @@ Nov 02, 2026 11:50:29 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 02, 2026 11:50:29 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
-Nov 02, 2026 11:50:29 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key pressed.
 Nov 02, 2026 11:50:30 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
 Nov 02, 2026 11:50:30 PM se233.arkanoid.controller.GameLogger action
@@ -8636,18 +8594,6 @@ Nov 02, 2026 11:50:40 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 02, 2026 11:50:40 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
-Nov 02, 2026 11:50:40 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
-Nov 02, 2026 11:50:40 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
-Nov 02, 2026 11:50:41 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
-Nov 02, 2026 11:50:41 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
-Nov 02, 2026 11:50:41 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
-Nov 02, 2026 11:50:41 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
 Nov 02, 2026 11:50:41 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 02, 2026 11:50:41 PM se233.arkanoid.controller.GameLogger action
@@ -8658,14 +8604,10 @@ Nov 02, 2026 11:50:43 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 02, 2026 11:50:43 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
-Nov 02, 2026 11:50:43 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key pressed.
 Nov 02, 2026 11:50:43 PM se233.arkanoid.controller.GameLogger score
 INFO: Score: 280
 Nov 02, 2026 11:50:43 PM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
-Nov 02, 2026 11:50:43 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key released.
 Nov 02, 2026 11:50:44 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 02, 2026 11:50:44 PM se233.arkanoid.controller.GameLogger action
@@ -8696,24 +8638,16 @@ Nov 02, 2026 11:50:49 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
 Nov 02, 2026 11:50:49 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
-Nov 02, 2026 11:50:49 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
 Nov 02, 2026 11:50:51 PM se233.arkanoid.controller.GameLogger score
 INFO: Score: 300
 Nov 02, 2026 11:50:51 PM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 02, 2026 11:50:51 PM se233.arkanoid.controller.GameLogger score
 INFO: Score: 350
-Nov 02, 2026 11:50:51 PM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 02, 2026 11:50:53 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 02, 2026 11:50:53 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
-Nov 02, 2026 11:50:54 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
-Nov 02, 2026 11:50:54 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
 Nov 02, 2026 11:50:54 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 02, 2026 11:50:54 PM se233.arkanoid.controller.GameLogger action
@@ -8734,8 +8668,6 @@ Nov 02, 2026 11:51:00 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
 Nov 02, 2026 11:51:00 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
-Nov 02, 2026 11:51:00 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
 Nov 02, 2026 11:51:01 PM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
 Nov 02, 2026 11:51:01 PM se233.arkanoid.controller.GameLogger action
@@ -8764,20 +8696,12 @@ Nov 02, 2026 11:51:10 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 02, 2026 11:51:10 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
-Nov 02, 2026 11:51:10 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
-Nov 02, 2026 11:51:10 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
 Nov 02, 2026 11:51:11 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 02, 2026 11:51:11 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
 Nov 02, 2026 11:51:11 PM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
-Nov 02, 2026 11:51:12 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
-Nov 02, 2026 11:51:12 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
 Nov 02, 2026 11:51:12 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 02, 2026 11:51:12 PM se233.arkanoid.controller.GameLogger action
@@ -8796,28 +8720,16 @@ Nov 02, 2026 11:51:16 PM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
 Nov 02, 2026 11:51:16 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
-Nov 02, 2026 11:51:16 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key pressed.
 Nov 02, 2026 11:51:17 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
 Nov 02, 2026 11:51:17 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
-Nov 02, 2026 11:51:17 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key released.
-Nov 02, 2026 11:51:20 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
-Nov 02, 2026 11:51:20 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
 Nov 02, 2026 11:51:20 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 02, 2026 11:51:20 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
 Nov 02, 2026 11:51:20 PM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
-Nov 02, 2026 11:51:20 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
-Nov 02, 2026 11:51:20 PM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
 Nov 02, 2026 11:51:21 PM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 02, 2026 11:51:21 PM se233.arkanoid.controller.GameLogger action
@@ -8828,6 +8740,230 @@ Nov 02, 2026 11:51:22 PM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 02, 2026 11:51:22 PM se233.arkanoid.controller.GameLogger info
 INFO: Stage 1 cleared.
+Nov 02, 2026 11:59:36 PM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Nov 02, 2026 11:59:38 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Nov 02, 2026 11:59:38 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 02, 2026 11:59:40 PM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Nov 02, 2026 11:59:41 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 20
+Nov 02, 2026 11:59:41 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 02, 2026 11:59:43 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 2
+Nov 02, 2026 11:59:46 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 30
+Nov 02, 2026 11:59:46 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 02, 2026 11:59:46 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 40
+Nov 02, 2026 11:59:46 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 50
+Nov 02, 2026 11:59:47 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 60
+Nov 02, 2026 11:59:47 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 02, 2026 11:59:47 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 70
+Nov 02, 2026 11:59:50 PM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Nov 02, 2026 11:59:52 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 80
+Nov 02, 2026 11:59:52 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 02, 2026 11:59:54 PM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 1
+Nov 02, 2026 11:59:57 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 130
+Nov 02, 2026 11:59:57 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 02, 2026 11:59:57 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 140
+Nov 02, 2026 11:59:58 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 150
+Nov 02, 2026 11:59:58 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 02, 2026 11:59:59 PM se233.arkanoid.controller.GameLogger score
+INFO: Score: 160
+Nov 02, 2026 11:59:59 PM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:00:00 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 210
+Nov 03, 2026 12:00:00 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:00:01 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 220
+Nov 03, 2026 12:00:01 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:00:02 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 230
+Nov 03, 2026 12:00:02 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:00:04 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 240
+Nov 03, 2026 12:00:04 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:00:07 AM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Nov 03, 2026 12:00:09 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 250
+Nov 03, 2026 12:00:09 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:00:12 AM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 0
+Nov 03, 2026 12:00:18 AM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Nov 03, 2026 12:00:20 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Nov 03, 2026 12:00:20 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:00:22 AM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Nov 03, 2026 12:00:23 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 20
+Nov 03, 2026 12:00:23 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:00:25 AM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 2
+Nov 03, 2026 12:00:28 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 30
+Nov 03, 2026 12:00:28 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:00:28 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 40
+Nov 03, 2026 12:00:28 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 50
+Nov 03, 2026 12:00:29 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 60
+Nov 03, 2026 12:00:29 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:00:29 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 70
+Nov 03, 2026 12:00:32 AM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Nov 03, 2026 12:00:34 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 80
+Nov 03, 2026 12:00:34 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:00:36 AM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 1
+Nov 03, 2026 12:00:39 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 130
+Nov 03, 2026 12:00:39 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:00:39 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 140
+Nov 03, 2026 12:00:40 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 150
+Nov 03, 2026 12:00:40 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:00:41 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 160
+Nov 03, 2026 12:00:41 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:00:42 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 210
+Nov 03, 2026 12:00:42 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:00:43 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 220
+Nov 03, 2026 12:00:43 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:00:44 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 230
+Nov 03, 2026 12:00:44 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:00:46 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 240
+Nov 03, 2026 12:00:46 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:00:49 AM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Nov 03, 2026 12:00:51 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 250
+Nov 03, 2026 12:00:51 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:00:54 AM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 0
+Nov 03, 2026 12:01:10 AM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Nov 03, 2026 12:01:11 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Nov 03, 2026 12:01:11 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:01:13 AM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Nov 03, 2026 12:01:15 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 20
+Nov 03, 2026 12:01:15 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:01:17 AM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 2
+Nov 03, 2026 12:01:19 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 30
+Nov 03, 2026 12:01:19 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:01:19 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 40
+Nov 03, 2026 12:01:19 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 50
+Nov 03, 2026 12:01:20 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 60
+Nov 03, 2026 12:01:20 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:01:20 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 70
+Nov 03, 2026 12:01:23 AM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Nov 03, 2026 12:01:25 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 80
+Nov 03, 2026 12:01:25 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:01:27 AM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 1
+Nov 03, 2026 12:01:30 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 130
+Nov 03, 2026 12:01:30 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:01:31 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 140
+Nov 03, 2026 12:01:31 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:01:32 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 150
+Nov 03, 2026 12:01:32 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:01:33 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 160
+Nov 03, 2026 12:01:33 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:01:34 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 210
+Nov 03, 2026 12:01:34 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:01:35 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 220
+Nov 03, 2026 12:01:35 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:01:36 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 230
+Nov 03, 2026 12:01:36 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:01:37 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 240
+Nov 03, 2026 12:01:37 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:01:40 AM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Nov 03, 2026 12:01:43 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 250
+Nov 03, 2026 12:01:43 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:01:46 AM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 0
 Nov 03, 2026 12:09:12 AM se233.arkanoid.controller.GameLogger info
 INFO: New game started.
 Nov 03, 2026 12:09:12 AM se233.arkanoid.controller.GameLogger info
@@ -8868,8 +9004,6 @@ Nov 03, 2026 12:09:18 AM se233.arkanoid.controller.GameLogger action
 FINE: Boss fired a projectile.
 Nov 03, 2026 12:09:18 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
-Nov 03, 2026 12:09:18 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
 Nov 03, 2026 12:09:19 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
 Nov 03, 2026 12:09:20 AM se233.arkanoid.controller.GameLogger action
@@ -8888,8 +9022,6 @@ Nov 03, 2026 12:09:22 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 03, 2026 12:09:22 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
-Nov 03, 2026 12:09:22 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
 Nov 03, 2026 12:09:22 AM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
 Nov 03, 2026 12:09:23 AM se233.arkanoid.controller.GameLogger action
@@ -8912,8 +9044,6 @@ Nov 03, 2026 12:09:25 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
 Nov 03, 2026 12:09:25 AM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
-Nov 03, 2026 12:09:25 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key pressed.
 Nov 03, 2026 12:09:26 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
 Nov 03, 2026 12:09:26 AM se233.arkanoid.controller.GameLogger action
@@ -8924,28 +9054,18 @@ Nov 03, 2026 12:09:27 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
 Nov 03, 2026 12:09:27 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
-Nov 03, 2026 12:09:27 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
 Nov 03, 2026 12:09:28 AM se233.arkanoid.controller.GameLogger action
 FINE: Boss fired a projectile.
 Nov 03, 2026 12:09:28 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 03, 2026 12:09:28 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
-Nov 03, 2026 12:09:28 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key pressed.
 Nov 03, 2026 12:09:29 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
 Nov 03, 2026 12:09:29 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
-Nov 03, 2026 12:09:29 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key released.
 Nov 03, 2026 12:09:29 AM se233.arkanoid.controller.GameLogger action
 FINE: Boss fired a projectile.
-Nov 03, 2026 12:09:29 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key pressed.
-Nov 03, 2026 12:09:29 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key released.
 Nov 03, 2026 12:09:30 AM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
 Nov 03, 2026 12:09:30 AM se233.arkanoid.controller.GameLogger action
@@ -8958,8 +9078,6 @@ Nov 03, 2026 12:09:31 AM se233.arkanoid.controller.GameLogger action
 FINE: Boss fired a projectile.
 Nov 03, 2026 12:09:31 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
-Nov 03, 2026 12:09:31 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
 Nov 03, 2026 12:09:32 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
 Nov 03, 2026 12:09:32 AM se233.arkanoid.controller.GameLogger score
@@ -9011,8 +9129,6 @@ FINE: Boss fired a projectile.
 Nov 03, 2026 12:09:36 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 03, 2026 12:09:36 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
-Nov 03, 2026 12:09:36 AM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
 Nov 03, 2026 12:09:37 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
@@ -9058,23 +9174,15 @@ Nov 03, 2026 12:09:45 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:09:45 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 470
-Nov 03, 2026 12:09:45 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:09:46 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 490
 Nov 03, 2026 12:09:46 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:09:46 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 540
-Nov 03, 2026 12:09:46 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:09:46 AM se233.arkanoid.controller.GameLogger info
 INFO: Piercing ball ended at the playfield boundary.
 Nov 03, 2026 12:09:46 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick hit.
-Nov 03, 2026 12:09:46 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick hit.
-Nov 03, 2026 12:09:47 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick hit.
 Nov 03, 2026 12:09:47 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick hit.
@@ -9090,20 +9198,14 @@ Nov 03, 2026 12:09:49 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:09:49 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 590
-Nov 03, 2026 12:09:49 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:09:50 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 610
 Nov 03, 2026 12:09:50 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:09:50 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 630
-Nov 03, 2026 12:09:50 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:09:50 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 650
-Nov 03, 2026 12:09:50 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:09:51 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick hit.
 Nov 03, 2026 12:09:52 AM se233.arkanoid.controller.GameLogger score
@@ -9120,8 +9222,6 @@ Nov 03, 2026 12:09:54 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:09:54 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 740
-Nov 03, 2026 12:09:54 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:09:55 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 750
 Nov 03, 2026 12:09:55 AM se233.arkanoid.controller.GameLogger action
@@ -9138,8 +9238,6 @@ Nov 03, 2026 12:09:59 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 03, 2026 12:09:59 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
-Nov 03, 2026 12:09:59 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key pressed.
 Nov 03, 2026 12:10:00 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
 Nov 03, 2026 12:10:00 AM se233.arkanoid.controller.GameLogger action
@@ -9150,14 +9248,10 @@ Nov 03, 2026 12:10:01 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick hit.
 Nov 03, 2026 12:10:01 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
-Nov 03, 2026 12:10:01 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
 Nov 03, 2026 12:10:02 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
 Nov 03, 2026 12:10:02 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
-Nov 03, 2026 12:10:02 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
 Nov 03, 2026 12:10:02 AM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
 Nov 03, 2026 12:10:04 AM se233.arkanoid.controller.GameLogger action
@@ -9186,12 +9280,8 @@ Nov 03, 2026 12:10:09 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:10:09 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 820
-Nov 03, 2026 12:10:09 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:10:09 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 830
-Nov 03, 2026 12:10:09 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:10:10 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick hit.
 Nov 03, 2026 12:10:11 AM se233.arkanoid.controller.GameLogger action
@@ -9216,12 +9306,6 @@ Nov 03, 2026 12:10:15 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 03, 2026 12:10:15 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
-Nov 03, 2026 12:10:15 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key pressed.
-Nov 03, 2026 12:10:15 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key released.
-Nov 03, 2026 12:10:15 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key pressed.
 Nov 03, 2026 12:10:16 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
 Nov 03, 2026 12:10:16 AM se233.arkanoid.controller.GameLogger action
@@ -9232,25 +9316,15 @@ Nov 03, 2026 12:10:18 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 03, 2026 12:10:18 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
-Nov 03, 2026 12:10:18 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
-Nov 03, 2026 12:10:18 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
 Nov 03, 2026 12:10:19 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 03, 2026 12:10:19 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
-Nov 03, 2026 12:10:19 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
 Nov 03, 2026 12:10:20 AM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
 Nov 03, 2026 12:10:20 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
 Nov 03, 2026 12:10:20 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key pressed.
-Nov 03, 2026 12:10:21 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key released.
-Nov 03, 2026 12:10:21 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 03, 2026 12:10:21 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
@@ -9262,28 +9336,14 @@ Nov 03, 2026 12:10:22 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 03, 2026 12:10:22 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick hit.
-Nov 03, 2026 12:10:22 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key released.
-Nov 03, 2026 12:10:22 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key pressed.
-Nov 03, 2026 12:10:22 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key released.
 Nov 03, 2026 12:10:23 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 03, 2026 12:10:23 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
-Nov 03, 2026 12:10:23 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
-Nov 03, 2026 12:10:23 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
-Nov 03, 2026 12:10:23 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
 Nov 03, 2026 12:10:24 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
 Nov 03, 2026 12:10:24 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
-Nov 03, 2026 12:10:24 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
 Nov 03, 2026 12:10:24 AM se233.arkanoid.controller.GameLogger warning
 WARNING: Player lost a life. Remaining lives: 3
 Nov 03, 2026 12:10:27 AM se233.arkanoid.controller.GameLogger score
@@ -9310,10 +9370,6 @@ Nov 03, 2026 12:10:34 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 03, 2026 12:10:34 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
-Nov 03, 2026 12:10:34 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
-Nov 03, 2026 12:10:34 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
 Nov 03, 2026 12:10:35 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 03, 2026 12:10:35 AM se233.arkanoid.controller.GameLogger action
@@ -9326,8 +9382,6 @@ Nov 03, 2026 12:10:38 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:10:38 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 950
-Nov 03, 2026 12:10:38 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:10:40 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 1000
 Nov 03, 2026 12:10:40 AM se233.arkanoid.controller.GameLogger action
@@ -9338,12 +9392,8 @@ Nov 03, 2026 12:10:42 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:10:42 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 1030
-Nov 03, 2026 12:10:42 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:10:42 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 1040
-Nov 03, 2026 12:10:42 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:10:43 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick hit.
 Nov 03, 2026 12:10:45 AM se233.arkanoid.controller.GameLogger action
@@ -9358,28 +9408,16 @@ Nov 03, 2026 12:10:49 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
 Nov 03, 2026 12:10:49 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
-Nov 03, 2026 12:10:49 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
-Nov 03, 2026 12:10:49 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
-Nov 03, 2026 12:10:49 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
-Nov 03, 2026 12:10:49 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
 Nov 03, 2026 12:10:50 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
 Nov 03, 2026 12:10:50 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 03, 2026 12:10:50 AM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
-Nov 03, 2026 12:10:50 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
 Nov 03, 2026 12:10:51 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 03, 2026 12:10:51 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
-Nov 03, 2026 12:10:51 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key pressed.
 Nov 03, 2026 12:10:52 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
 Nov 03, 2026 12:10:52 AM se233.arkanoid.controller.GameLogger action
@@ -9388,10 +9426,6 @@ Nov 03, 2026 12:10:52 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 03, 2026 12:10:53 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
-Nov 03, 2026 12:10:53 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
-Nov 03, 2026 12:10:53 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
 Nov 03, 2026 12:10:53 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 03, 2026 12:10:53 AM se233.arkanoid.controller.GameLogger action
@@ -9415,13 +9449,7 @@ FINE: Paddle right key released.
 Nov 03, 2026 12:10:58 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 03, 2026 12:10:58 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
-Nov 03, 2026 12:10:58 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
-Nov 03, 2026 12:10:58 AM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
-Nov 03, 2026 12:10:58 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
 Nov 03, 2026 12:10:59 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 03, 2026 12:11:00 AM se233.arkanoid.controller.GameLogger action
@@ -9442,10 +9470,6 @@ Nov 03, 2026 12:11:04 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 03, 2026 12:11:04 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
-Nov 03, 2026 12:11:05 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key pressed.
-Nov 03, 2026 12:11:05 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key released.
 Nov 03, 2026 12:11:05 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 03, 2026 12:11:05 AM se233.arkanoid.controller.GameLogger action
@@ -9497,8 +9521,6 @@ FINE: Paddle left key released.
 Nov 03, 2026 12:11:14 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 03, 2026 12:11:14 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key released.
-Nov 03, 2026 12:11:14 AM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
 Nov 03, 2026 12:11:16 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 1120
@@ -9508,8 +9530,6 @@ Nov 03, 2026 12:11:16 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 03, 2026 12:11:16 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
-Nov 03, 2026 12:11:16 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
 Nov 03, 2026 12:11:17 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
 Nov 03, 2026 12:11:17 AM se233.arkanoid.controller.GameLogger action
@@ -9520,12 +9540,8 @@ Nov 03, 2026 12:11:19 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:11:19 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 1150
-Nov 03, 2026 12:11:19 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:11:19 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 1160
-Nov 03, 2026 12:11:19 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:11:19 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 03, 2026 12:11:20 AM se233.arkanoid.controller.GameLogger action
@@ -9586,8 +9602,6 @@ Nov 03, 2026 12:11:40 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 03, 2026 12:11:40 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
-Nov 03, 2026 12:11:40 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key pressed.
 Nov 03, 2026 12:11:41 AM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
 Nov 03, 2026 12:11:41 AM se233.arkanoid.controller.GameLogger action
@@ -9600,8 +9614,6 @@ Nov 03, 2026 12:11:42 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick hit.
 Nov 03, 2026 12:11:42 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
-Nov 03, 2026 12:11:42 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
 Nov 03, 2026 12:11:43 AM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
 Nov 03, 2026 12:11:45 AM se233.arkanoid.controller.GameLogger score
@@ -9610,8 +9622,6 @@ Nov 03, 2026 12:11:45 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:11:45 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 1250
-Nov 03, 2026 12:11:45 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:11:45 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick hit.
 Nov 03, 2026 12:11:46 AM se233.arkanoid.controller.GameLogger action
@@ -9632,8 +9642,6 @@ Nov 03, 2026 12:11:48 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:11:48 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 1310
-Nov 03, 2026 12:11:48 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:11:49 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 1320
 Nov 03, 2026 12:11:49 AM se233.arkanoid.controller.GameLogger action
@@ -9644,16 +9652,10 @@ Nov 03, 2026 12:11:50 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:11:50 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick hit.
-Nov 03, 2026 12:11:50 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick hit.
 Nov 03, 2026 12:11:50 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 1390
-Nov 03, 2026 12:11:50 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:11:50 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 1410
-Nov 03, 2026 12:11:50 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:11:51 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 1460
 Nov 03, 2026 12:11:51 AM se233.arkanoid.controller.GameLogger action
@@ -9664,8 +9666,6 @@ Nov 03, 2026 12:11:52 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:11:52 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 1530
-Nov 03, 2026 12:11:52 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:11:53 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 1580
 Nov 03, 2026 12:11:53 AM se233.arkanoid.controller.GameLogger action
@@ -9684,16 +9684,10 @@ Nov 03, 2026 12:11:56 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:11:56 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick hit.
-Nov 03, 2026 12:11:56 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick hit.
 Nov 03, 2026 12:11:56 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 1620
-Nov 03, 2026 12:11:56 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:11:56 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 1640
-Nov 03, 2026 12:11:56 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:11:57 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick hit.
 Nov 03, 2026 12:11:58 AM se233.arkanoid.controller.GameLogger score
@@ -9729,10 +9723,6 @@ FINE: Paddle left key pressed.
 Nov 03, 2026 12:12:07 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
 Nov 03, 2026 12:12:07 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key pressed.
-Nov 03, 2026 12:12:07 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key released.
-Nov 03, 2026 12:12:07 AM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
 Nov 03, 2026 12:12:08 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
@@ -9750,16 +9740,12 @@ Nov 03, 2026 12:12:11 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 03, 2026 12:12:11 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
-Nov 03, 2026 12:12:11 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
 Nov 03, 2026 12:12:12 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
 Nov 03, 2026 12:12:12 AM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
 Nov 03, 2026 12:12:12 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
-Nov 03, 2026 12:12:12 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
 Nov 03, 2026 12:12:14 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 1700
 Nov 03, 2026 12:12:14 AM se233.arkanoid.controller.GameLogger action
@@ -9787,8 +9773,6 @@ FINE: Paddle right key released.
 Nov 03, 2026 12:12:19 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 03, 2026 12:12:19 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
-Nov 03, 2026 12:12:19 AM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
 Nov 03, 2026 12:12:21 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
@@ -9798,8 +9782,6 @@ Nov 03, 2026 12:12:21 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 1720
 Nov 03, 2026 12:12:21 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
-Nov 03, 2026 12:12:21 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key pressed.
 Nov 03, 2026 12:12:22 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
 Nov 03, 2026 12:12:22 AM se233.arkanoid.controller.GameLogger action
@@ -9838,10 +9820,6 @@ Nov 03, 2026 12:12:34 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 03, 2026 12:12:35 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
-Nov 03, 2026 12:12:36 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
-Nov 03, 2026 12:12:36 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
 Nov 03, 2026 12:12:36 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 03, 2026 12:12:36 AM se233.arkanoid.controller.GameLogger action
@@ -9902,18 +9880,28 @@ Nov 03, 2026 12:12:52 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 03, 2026 12:12:52 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
-Nov 03, 2026 12:12:52 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key pressed.
+Nov 03, 2026 12:12:52 AM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
 Nov 03, 2026 12:12:53 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
 Nov 03, 2026 12:12:53 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 03, 2026 12:12:53 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
+Nov 03, 2026 12:12:53 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Nov 03, 2026 12:12:53 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
 Nov 03, 2026 12:12:54 AM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Nov 03, 2026 12:12:55 AM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
 Nov 03, 2026 12:12:57 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
+Nov 03, 2026 12:12:57 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 20
+Nov 03, 2026 12:12:57 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
 Nov 03, 2026 12:12:58 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
 Nov 03, 2026 12:12:58 AM se233.arkanoid.controller.GameLogger action
@@ -9922,39 +9910,45 @@ Nov 03, 2026 12:12:59 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
 Nov 03, 2026 12:12:59 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
-Nov 03, 2026 12:12:59 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
-Nov 03, 2026 12:12:59 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
-Nov 03, 2026 12:12:59 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
-Nov 03, 2026 12:12:59 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
+Nov 03, 2026 12:12:59 AM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 2
 Nov 03, 2026 12:13:00 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
 Nov 03, 2026 12:13:00 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
-Nov 03, 2026 12:13:00 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
 Nov 03, 2026 12:13:00 AM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
 Nov 03, 2026 12:13:01 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 03, 2026 12:13:01 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
+Nov 03, 2026 12:13:01 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 30
+Nov 03, 2026 12:13:01 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:13:01 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 40
+Nov 03, 2026 12:13:01 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 50
+Nov 03, 2026 12:13:02 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 60
+Nov 03, 2026 12:13:02 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
 Nov 03, 2026 12:13:03 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 03, 2026 12:13:03 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
+Nov 03, 2026 12:13:03 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 70
+Nov 03, 2026 12:13:03 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
 Nov 03, 2026 12:13:04 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 03, 2026 12:13:04 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
 Nov 03, 2026 12:13:04 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
-Nov 03, 2026 12:13:04 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
-Nov 03, 2026 12:13:04 AM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Nov 03, 2026 12:13:05 AM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
 Nov 03, 2026 12:13:07 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 1920
@@ -9962,10 +9956,8 @@ Nov 03, 2026 12:13:07 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:13:07 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick hit.
-Nov 03, 2026 12:13:08 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key pressed.
-Nov 03, 2026 12:13:08 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key released.
+Nov 03, 2026 12:13:07 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 80
 Nov 03, 2026 12:13:08 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 03, 2026 12:13:08 AM se233.arkanoid.controller.GameLogger action
@@ -9978,28 +9970,62 @@ Nov 03, 2026 12:13:09 AM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
 Nov 03, 2026 12:13:09 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
+Nov 03, 2026 12:13:09 AM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 1
 Nov 03, 2026 12:13:10 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
 Nov 03, 2026 12:13:10 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 03, 2026 12:13:11 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
+Nov 03, 2026 12:13:12 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 130
+Nov 03, 2026 12:13:12 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
 Nov 03, 2026 12:13:13 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 03, 2026 12:13:13 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
 Nov 03, 2026 12:13:13 AM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
+Nov 03, 2026 12:13:13 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 140
+Nov 03, 2026 12:13:13 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
 Nov 03, 2026 12:13:14 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 03, 2026 12:13:14 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
+Nov 03, 2026 12:13:14 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 150
+Nov 03, 2026 12:13:14 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:13:15 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 160
+Nov 03, 2026 12:13:15 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
 Nov 03, 2026 12:13:16 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 1940
 Nov 03, 2026 12:13:16 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:13:16 AM se233.arkanoid.controller.GameLogger info
 INFO: Stage 7 cleared.
+Nov 03, 2026 12:13:16 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 210
+Nov 03, 2026 12:13:17 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 220
+Nov 03, 2026 12:13:17 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:13:18 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 230
+Nov 03, 2026 12:13:18 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:13:19 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 240
+Nov 03, 2026 12:13:19 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:13:22 AM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
 Nov 03, 2026 12:13:23 AM se233.arkanoid.controller.GameLogger info
 INFO: Upgrade selected: Long paddle
 Nov 03, 2026 12:13:25 AM se233.arkanoid.controller.GameLogger score
@@ -10014,6 +10040,8 @@ Nov 03, 2026 12:13:25 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 03, 2026 12:13:25 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
+Nov 03, 2026 12:13:25 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 250
 Nov 03, 2026 12:13:26 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 03, 2026 12:13:26 AM se233.arkanoid.controller.GameLogger action
@@ -10026,8 +10054,8 @@ Nov 03, 2026 12:13:28 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 03, 2026 12:13:28 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
-Nov 03, 2026 12:13:28 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
+Nov 03, 2026 12:13:28 AM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 0
 Nov 03, 2026 12:13:29 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
 Nov 03, 2026 12:13:29 AM se233.arkanoid.controller.GameLogger action
@@ -10060,8 +10088,6 @@ Nov 03, 2026 12:13:35 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key pressed.
 Nov 03, 2026 12:13:35 AM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
-Nov 03, 2026 12:13:35 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key released.
 Nov 03, 2026 12:13:36 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 03, 2026 12:13:36 AM se233.arkanoid.controller.GameLogger action
@@ -10103,8 +10129,6 @@ FINE: Brick destroyed.
 Nov 03, 2026 12:13:45 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2020
 Nov 03, 2026 12:13:45 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
-Nov 03, 2026 12:13:45 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick hit.
 Nov 03, 2026 12:13:47 AM se233.arkanoid.controller.GameLogger action
 FINE: Ball bounced off the paddle.
@@ -10124,78 +10148,40 @@ Nov 03, 2026 12:13:53 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick hit.
 Nov 03, 2026 12:13:53 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2060
-Nov 03, 2026 12:13:53 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:13:53 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2080
-Nov 03, 2026 12:13:53 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
-Nov 03, 2026 12:13:53 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick hit.
 Nov 03, 2026 12:13:53 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2130
-Nov 03, 2026 12:13:53 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:13:53 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2150
-Nov 03, 2026 12:13:53 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
-Nov 03, 2026 12:13:53 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick hit.
 Nov 03, 2026 12:13:53 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2170
-Nov 03, 2026 12:13:53 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:13:53 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2180
-Nov 03, 2026 12:13:53 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
-Nov 03, 2026 12:13:53 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick hit.
 Nov 03, 2026 12:13:53 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2210
-Nov 03, 2026 12:13:53 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:13:54 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2230
 Nov 03, 2026 12:13:54 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:13:54 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2240
-Nov 03, 2026 12:13:54 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:13:54 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2250
-Nov 03, 2026 12:13:54 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:13:54 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2260
-Nov 03, 2026 12:13:54 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:13:54 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2270
-Nov 03, 2026 12:13:54 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:13:54 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2280
-Nov 03, 2026 12:13:54 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:13:54 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick hit.
 Nov 03, 2026 12:13:54 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2290
-Nov 03, 2026 12:13:54 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:13:54 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2310
-Nov 03, 2026 12:13:54 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
-Nov 03, 2026 12:13:54 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick hit.
 Nov 03, 2026 12:13:54 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2360
-Nov 03, 2026 12:13:54 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:13:55 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick hit.
 Nov 03, 2026 12:13:55 AM se233.arkanoid.controller.GameLogger score
@@ -10204,26 +10190,14 @@ Nov 03, 2026 12:13:55 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:13:55 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2390
-Nov 03, 2026 12:13:55 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
-Nov 03, 2026 12:13:55 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick hit.
 Nov 03, 2026 12:13:55 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2440
-Nov 03, 2026 12:13:55 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:13:55 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2450
-Nov 03, 2026 12:13:55 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:13:55 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2460
-Nov 03, 2026 12:13:55 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:13:55 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2470
-Nov 03, 2026 12:13:55 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:13:56 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick hit.
 Nov 03, 2026 12:13:56 AM se233.arkanoid.controller.GameLogger score
@@ -10231,10 +10205,6 @@ INFO: Score: 2490
 Nov 03, 2026 12:13:56 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:13:57 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick hit.
-Nov 03, 2026 12:13:57 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick hit.
-Nov 03, 2026 12:13:58 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick hit.
 Nov 03, 2026 12:13:58 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick hit.
@@ -10252,20 +10222,14 @@ Nov 03, 2026 12:14:07 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:14:07 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2580
-Nov 03, 2026 12:14:07 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:14:07 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2600
-Nov 03, 2026 12:14:07 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:14:08 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2620
 Nov 03, 2026 12:14:08 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:14:08 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2640
-Nov 03, 2026 12:14:08 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:14:09 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 2660
 Nov 03, 2026 12:14:09 AM se233.arkanoid.controller.GameLogger action
@@ -10298,16 +10262,10 @@ Nov 03, 2026 12:15:49 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:15:49 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 30
-Nov 03, 2026 12:15:49 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:15:49 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 40
-Nov 03, 2026 12:15:49 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:15:49 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 50
-Nov 03, 2026 12:15:49 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:15:50 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 60
 Nov 03, 2026 12:15:50 AM se233.arkanoid.controller.GameLogger action
@@ -10346,8 +10304,6 @@ Nov 03, 2026 12:15:58 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:15:58 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 190
-Nov 03, 2026 12:15:58 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:16:00 AM se233.arkanoid.controller.GameLogger warning
 WARNING: Player lost a life. Remaining lives: 1
 Nov 03, 2026 12:16:03 AM se233.arkanoid.controller.GameLogger score
@@ -10366,14 +10322,100 @@ Nov 03, 2026 12:16:10 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:16:10 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 310
-Nov 03, 2026 12:16:10 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:16:10 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 320
-Nov 03, 2026 12:16:10 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:16:13 AM se233.arkanoid.controller.GameLogger warning
 WARNING: Player lost a life. Remaining lives: 0
+Nov 03, 2026 12:18:48 AM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Nov 03, 2026 12:18:50 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Nov 03, 2026 12:18:50 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:18:52 AM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Nov 03, 2026 12:18:53 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 20
+Nov 03, 2026 12:18:53 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:18:55 AM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 2
+Nov 03, 2026 12:18:58 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 30
+Nov 03, 2026 12:18:58 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:18:58 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 40
+Nov 03, 2026 12:18:58 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 50
+Nov 03, 2026 12:18:59 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 60
+Nov 03, 2026 12:18:59 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:18:59 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 70
+Nov 03, 2026 12:19:02 AM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Nov 03, 2026 12:19:04 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 80
+Nov 03, 2026 12:19:04 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:19:06 AM se233.arkanoid.controller.GameLogger warning
+WARNING: Player lost a life. Remaining lives: 1
+Nov 03, 2026 12:19:09 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 130
+Nov 03, 2026 12:19:09 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:19:10 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 140
+Nov 03, 2026 12:19:10 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:19:11 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 150
+Nov 03, 2026 12:19:11 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:19:12 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 160
+Nov 03, 2026 12:19:12 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:19:13 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 210
+Nov 03, 2026 12:19:13 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:19:14 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 220
+Nov 03, 2026 12:19:14 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:19:15 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 230
+Nov 03, 2026 12:19:15 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:19:16 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 240
+Nov 03, 2026 12:19:16 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:19:19 AM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
+Nov 03, 2026 12:19:22 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 290
+Nov 03, 2026 12:19:22 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:19:22 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 300
+Nov 03, 2026 12:19:24 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 310
+Nov 03, 2026 12:19:24 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:19:24 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 320
+Nov 03, 2026 12:19:24 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 370
+Nov 03, 2026 12:19:26 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 380
+Nov 03, 2026 12:19:26 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:19:26 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 390
 Nov 03, 2026 12:23:36 AM se233.arkanoid.controller.GameLogger info
 INFO: New game started.
 Nov 03, 2026 12:23:38 AM se233.arkanoid.controller.GameLogger score
@@ -10390,16 +10432,12 @@ Nov 03, 2026 12:23:40 AM se233.arkanoid.controller.GameLogger warning
 WARNING: Player lost a life. Remaining lives: 2
 Nov 03, 2026 12:23:40 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
-Nov 03, 2026 12:23:40 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle right key pressed.
 Nov 03, 2026 12:23:41 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
 Nov 03, 2026 12:23:42 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key pressed.
 Nov 03, 2026 12:23:42 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
-Nov 03, 2026 12:23:42 AM se233.arkanoid.controller.GameLogger action
-FINE: Paddle left key pressed.
 Nov 03, 2026 12:23:43 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle left key released.
 Nov 03, 2026 12:23:43 AM se233.arkanoid.controller.GameLogger score
@@ -10408,20 +10446,14 @@ Nov 03, 2026 12:23:43 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:23:43 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 30
-Nov 03, 2026 12:23:43 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:23:43 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 40
-Nov 03, 2026 12:23:43 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:23:44 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 50
 Nov 03, 2026 12:23:44 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:23:44 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 60
-Nov 03, 2026 12:23:44 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:23:45 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 70
 Nov 03, 2026 12:23:45 AM se233.arkanoid.controller.GameLogger action
@@ -10456,8 +10488,6 @@ Nov 03, 2026 12:23:52 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:23:52 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 190
-Nov 03, 2026 12:23:52 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:23:54 AM se233.arkanoid.controller.GameLogger warning
 WARNING: Player lost a life. Remaining lives: 1
 Nov 03, 2026 12:23:57 AM se233.arkanoid.controller.GameLogger score
@@ -10478,6 +10508,14 @@ Nov 03, 2026 12:24:01 AM se233.arkanoid.controller.GameLogger action
 FINE: Paddle right key released.
 Nov 03, 2026 12:24:02 AM se233.arkanoid.controller.GameLogger warning
 WARNING: Player lost a life. Remaining lives: 0
+Nov 03, 2026 12:26:26 AM se233.arkanoid.controller.GameLogger info
+INFO: New game started.
+Nov 03, 2026 12:26:28 AM se233.arkanoid.controller.GameLogger score
+INFO: Score: 10
+Nov 03, 2026 12:26:28 AM se233.arkanoid.controller.GameLogger action
+FINE: Brick destroyed.
+Nov 03, 2026 12:26:29 AM se233.arkanoid.controller.GameLogger action
+FINE: Ball bounced off the paddle.
 Nov 03, 2026 12:27:11 AM se233.arkanoid.controller.GameLogger info
 INFO: New game started.
 Nov 03, 2026 12:27:12 AM se233.arkanoid.controller.GameLogger score
@@ -10496,20 +10534,14 @@ Nov 03, 2026 12:27:17 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:27:17 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 30
-Nov 03, 2026 12:27:17 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:27:17 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 40
-Nov 03, 2026 12:27:17 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:27:18 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 50
 Nov 03, 2026 12:27:18 AM se233.arkanoid.controller.GameLogger action
 FINE: Brick destroyed.
 Nov 03, 2026 12:27:18 AM se233.arkanoid.controller.GameLogger score
 INFO: Score: 60
-Nov 03, 2026 12:27:18 AM se233.arkanoid.controller.GameLogger action
-FINE: Brick destroyed.
 Nov 03, 2026 12:27:36 AM se233.arkanoid.controller.GameLogger info
 INFO: New game started.
 Nov 03, 2026 12:27:36 AM se233.arkanoid.controller.GameLogger info

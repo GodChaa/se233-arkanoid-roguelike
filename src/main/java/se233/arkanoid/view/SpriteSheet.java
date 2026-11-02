@@ -31,6 +31,16 @@ public class SpriteSheet {
         }
     }
 
+    public SpriteSheet(Image image) {
+        if (image == null || image.isError()
+                || image.getWidth() <= 0 || image.getHeight() <= 0) {
+            throw new IllegalArgumentException(
+                    "Sprite sheet image is missing or invalid."
+            );
+        }
+        this.image = image;
+    }
+
     public Image getSprite(int x, int y, int width, int height) {
         if (x < 0 || y < 0 || width <= 0 || height <= 0
                 || x + width > image.getWidth()
