@@ -287,7 +287,7 @@ class GameControllerTest {
 
     @Test
     @Order(19)
-    void piercingBallPowerEndsAndBouncesAtTheSideWall() {
+    void piercingBallStaysActiveWhenItReachesAWallBeforeHittingABrick() {
         Harness harness = new Harness(new Random(1));
         harness.controller.startNewGame();
         harness.controller.getGame().activatePiercingBall();
@@ -295,13 +295,13 @@ class GameControllerTest {
 
         harness.controller.update(0.05);
 
-        assertFalse(harness.controller.getGame().isPiercingBallActive());
+        assertTrue(harness.controller.getGame().isPiercingBallActive());
         assertTrue(harness.display.ball.getVelocityX() < 0);
     }
 
     @Test
     @Order(20)
-    void piercingBallPowerEndsAtTheTopWallToo() {
+    void piercingBallStaysActiveAtTheTopWallUntilItHitsABrick() {
         Harness harness = new Harness(new Random(1));
         harness.controller.startNewGame();
         harness.controller.getGame().activatePiercingBall();
@@ -309,8 +309,28 @@ class GameControllerTest {
 
         harness.controller.update(0.05);
 
-        assertFalse(harness.controller.getGame().isPiercingBallActive());
+        assertTrue(harness.controller.getGame().isPiercingBallActive());
         assertTrue(harness.display.ball.getVelocityY() > 0);
+    }
+
+    @Test
+    void piercingBallEndsAtTheNextWallAfterBreakingABrick() {
+        Harness harness = new Harness(new Random(1));
+        harness.controller.startNewGame();
+        harness.controller.getGame().activatePiercingBall();
+        Brick brick = harness.display.stage.getBricks().get(0);
+        harness.display.ball.setPosition(brick.getX() + 35,
+                brick.getY() + brick.getHeight() + 12);
+
+        harness.controller.update(0.05);
+
+        assertTrue(brick.isDestroyed());
+        assertTrue(harness.controller.getGame().isPiercingBallActive());
+        harness.display.ball.setPosition(GameView.WIDTH - 1, 300);
+
+        harness.controller.update(0.05);
+
+        assertFalse(harness.controller.getGame().isPiercingBallActive());
     }
 
     @Test

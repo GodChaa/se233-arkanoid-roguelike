@@ -136,6 +136,18 @@ class GameModelTest {
         game.activatePiercingBall();
 
         assertTrue(game.isPiercingBallActive());
+        assertFalse(game.hasPiercingBallHitBrick());
+    }
+
+    @Test
+    void tracksTheFirstBrickHitWhilePiercingIsActive() {
+        GameModel game = new GameModel();
+        game.startNewGame();
+        game.activatePiercingBall();
+
+        game.hitBrick(new Brick(1, 10));
+
+        assertTrue(game.hasPiercingBallHitBrick());
     }
 
     @Test
@@ -149,6 +161,7 @@ class GameModelTest {
         game.activatePiercingBall();
         game.deactivatePiercingBall();
         assertFalse(game.isPiercingBallActive());
+        assertFalse(game.hasPiercingBallHitBrick());
     }
 
     @Test

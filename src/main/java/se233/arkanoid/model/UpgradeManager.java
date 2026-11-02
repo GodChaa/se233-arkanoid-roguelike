@@ -7,6 +7,7 @@ import java.util.Objects;
 import java.util.Random;
 
 public class UpgradeManager {
+    private final List<Upgrade> upgradePool;
     private final List<Upgrade> availableUpgrades;
     private final Random random;
 
@@ -18,7 +19,8 @@ public class UpgradeManager {
         if (availableUpgrades.isEmpty()) {
             throw new IllegalArgumentException("At least one upgrade is required.");
         }
-        this.availableUpgrades = List.copyOf(availableUpgrades);
+        this.upgradePool = List.copyOf(availableUpgrades);
+        this.availableUpgrades = new ArrayList<>(this.upgradePool);
         this.random = Objects.requireNonNull(random, "Random source cannot be null.");
     }
 
@@ -38,5 +40,18 @@ public class UpgradeManager {
             throw new IllegalArgumentException("Selected upgrade is not in the available pool.");
         }
         selectedUpgrade.apply(game);
+    }
+
+    public boolean contains(Upgrade upgrade) {
+        return availableUpgrades.contains(upgrade);
+    }
+
+    public void remove(Upgrade upgrade) {
+        availableUpgrades.remove(upgrade);
+    }
+
+    public void reset() {
+        availableUpgrades.clear();
+        availableUpgrades.addAll(upgradePool);
     }
 }

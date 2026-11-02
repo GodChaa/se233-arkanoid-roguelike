@@ -12,6 +12,7 @@ public class GameModel {
     private double brickScoreMultiplier = 1.0;
     private int extraBallCount;
     private boolean piercingBallActive;
+    private boolean piercingBallHitBrick;
 
     public void startNewGame() {
         lives = DEFAULT_LIVES;
@@ -22,6 +23,7 @@ public class GameModel {
         brickScoreMultiplier = 1.0;
         extraBallCount = 0;
         piercingBallActive = false;
+        piercingBallHitBrick = false;
         state = GameState.PLAYING;
     }
 
@@ -38,7 +40,11 @@ public class GameModel {
         if (brick == null) {
             throw new IllegalArgumentException("Brick cannot be null.");
         }
+        boolean alreadyDestroyed = brick.isDestroyed();
         boolean destroyed = brick.hit();
+        if (piercingBallActive && !alreadyDestroyed) {
+            piercingBallHitBrick = true;
+        }
         if (destroyed) {
             addScore((int) Math.round(brick.getScoreValue() * brickScoreMultiplier));
             if (brick.getType() == BrickType.SPECIAL) addLife();
@@ -101,10 +107,12 @@ public class GameModel {
             throw new IllegalStateException("Piercing mode can only be activated during a run.");
         }
         piercingBallActive = true;
+        piercingBallHitBrick = false;
     }
 
     public void deactivatePiercingBall() {
         piercingBallActive = false;
+        piercingBallHitBrick = false;
     }
 
     public void completeStage() {
@@ -144,6 +152,7 @@ public class GameModel {
     public double getBrickScoreMultiplier() { return brickScoreMultiplier; }
     public int getExtraBallCount() { return extraBallCount; }
     public boolean isPiercingBallActive() { return piercingBallActive; }
+    public boolean hasPiercingBallHitBrick() { return piercingBallHitBrick; }
 
     private void requireState(GameState expected, String message) {
         if (state != expected) {

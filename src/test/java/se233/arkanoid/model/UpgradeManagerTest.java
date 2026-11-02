@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class UpgradeManagerTest {
@@ -38,5 +39,24 @@ class UpgradeManagerTest {
         manager.apply(upgrade, game);
 
         assertEquals(25, game.getScore());
+    }
+
+    @Test
+    void removingAnUpgradeHidesItUntilTheNextRunReset() {
+        Upgrade longPaddle = new Upgrade("Long paddle", "Increase paddle size.");
+        Upgrade second = new Upgrade("Second", "Second choice.");
+        Upgrade third = new Upgrade("Third", "Third choice.");
+        Upgrade fourth = new Upgrade("Fourth", "Fourth choice.");
+        UpgradeManager manager = new UpgradeManager(
+                List.of(longPaddle, second, third, fourth), new Random(1));
+
+        manager.remove(longPaddle);
+
+        assertEquals(3, manager.getChoices(3).size());
+        assertFalse(manager.contains(longPaddle));
+
+        manager.reset();
+
+        assertTrue(manager.contains(longPaddle));
     }
 }

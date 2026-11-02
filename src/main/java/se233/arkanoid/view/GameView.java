@@ -2,11 +2,14 @@ package se233.arkanoid.view;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
+import javafx.scene.image.WritableImage;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
@@ -24,9 +27,12 @@ import se233.arkanoid.model.Upgrade;
 import java.util.IdentityHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.function.Consumer;
+import javafx.util.Duration;
 
 public class GameView implements GameDisplay {
+    private static final int VAUS_SHEET_X_OFFSET = 16;
     public static final double WIDTH = 640;
     public static final double HEIGHT = 700;
     public static final double PADDLE_Y = 640;
@@ -46,7 +52,7 @@ public class GameView implements GameDisplay {
     private final Image fieldSheet =
             loadImage("/se233/arkanoid/assets/fields.png");
     private final Image vausSheet =
-            loadImage("/se233/arkanoid/assets/vaus.png");
+            loadVausSheet("/se233/arkanoid/assets/vaus.png");
     private final Image blockSheet =
             loadImage("/se233/arkanoid/assets/blocks.png");
     private final Image bossImage =
@@ -58,6 +64,16 @@ public class GameView implements GameDisplay {
             new IdentityHashMap<>();
 
     private Stage animatedStage;
+    private boolean piercingBallActive;
+    private final Random spriteRandom = new Random();
+    private int selectedPaddleRow;
+    private int longPaddleSteps;
+    private boolean speedPaddleUpgrade;
+    private int currentLives = 3;
+    private int currentStageNumber = 1;
+    private double lastPaddleX = (WIDTH - 100) / 2;
+    private double lastPaddleWidth = 100;
+    private Timeline gameOverAnimation;
 
     public GameView() {
         root.setStyle("-fx-background-color: #111827;");
@@ -157,7 +173,9 @@ public class GameView implements GameDisplay {
             int stageNumber
     ) {
         GraphicsContext graphics = canvas.getGraphicsContext2D();
-        drawField(graphics);
+        currentLives = lives;
+        currentStageNumber = stageNumber;
+        drawField(graphics, stageNumber);
 
         if (stage != null) {
             long now = System.nanoTime();
@@ -185,11 +203,8 @@ public class GameView implements GameDisplay {
                 }
             }
 
-            // วาดอิฐและเอฟเฟกต์ โดยใช้ลำดับเดิมของแต่ละก้อน
-            for (int brickIndex = 0;
-                 brickIndex < bricks.size();
-                 brickIndex++) {
-                Brick brick = bricks.get(brickIndex);
+            // วาดอิฐและเอฟเฟกต์ด้วย sprite ที่จับคู่ตามชนิดอิฐ
+            for (Brick brick : bricks) {
                 Animation animation = brickAnimations.get(brick);
 
                 if (brick.isDestroyed()) {
@@ -202,7 +217,7 @@ public class GameView implements GameDisplay {
                     continue;
                 }
 
-                drawBrick(graphics, brick, brickIndex);
+                drawBrick(graphics, brick);
 
                 if (animation != null) {
                     if (animation.isFinished(now)) {
@@ -286,10 +301,27 @@ public class GameView implements GameDisplay {
             return;
         }
 
+        lastPaddleX = paddle.getX();
+        lastPaddleWidth = paddle.getWidth();
+
         if (isUsable(vausSheet)) {
+            int sourceX;
+            int sourceY;
+            if (speedPaddleUpgrade) {
+                sourceX = VAUS_SHEET_X_OFFSET + (5 - 1) * 32;
+                sourceY = (6 - 1) * 8;
+                drawPaddleExhaust(graphics, paddle);
+            } else if (currentLives >= 1 && currentLives <= 3) {
+                sourceX = VAUS_SHEET_X_OFFSET + (6 - 1) * 32;
+                sourceY = (3 - currentLives) * 8;
+            } else {
+                sourceX = VAUS_SHEET_X_OFFSET
+                        + (2 + longPaddleSteps - 1) * 32;
+                sourceY = selectedPaddleRow * 8;
+            }
             graphics.drawImage(
                     vausSheet,
-                    32, 0, 32, 8,
+                    sourceX, sourceY, 32, 8,
                     paddle.getX(), PADDLE_Y,
                     paddle.getWidth(), PADDLE_HEIGHT
             );
@@ -306,24 +338,52 @@ public class GameView implements GameDisplay {
         }
     }
 
+    private void drawPaddleExhaust(GraphicsContext graphics, Paddle paddle) {
+        int smokeRow = 8 + (int) ((System.nanoTime() / 140_000_000L) % 2);
+        double effectWidth = Math.min(32, paddle.getWidth() / 2);
+        double effectX = paddle.getX() + (paddle.getWidth() - effectWidth) / 2;
+        graphics.drawImage(
+                vausSheet,
+                VAUS_SHEET_X_OFFSET + (4 - 1) * 32,
+                (smokeRow - 1) * 8, 32, 8,
+                effectX, PADDLE_Y + PADDLE_HEIGHT + 8, effectWidth, 8
+        );
+        graphics.drawImage(
+                vausSheet,
+                VAUS_SHEET_X_OFFSET + (4 - 1) * 32,
+                (7 - 1) * 8, 32, 8,
+                effectX, PADDLE_Y + PADDLE_HEIGHT - 2, effectWidth, 8
+        );
+    }
+
     private void drawBall(GraphicsContext graphics, Ball ball) {
         if (ball == null) {
             return;
         }
 
-        graphics.setFill(Color.GOLD);
+        graphics.setFill(piercingBallActive ? Color.CYAN : Color.GOLD);
         graphics.fillOval(
                 ball.getX() - BALL_RADIUS,
                 ball.getY() - BALL_RADIUS,
                 BALL_RADIUS * 2,
                 BALL_RADIUS * 2
         );
+        if (piercingBallActive) {
+            graphics.setStroke(Color.WHITE);
+            graphics.setLineWidth(2);
+            graphics.strokeOval(
+                    ball.getX() - BALL_RADIUS - 3,
+                    ball.getY() - BALL_RADIUS - 3,
+                    BALL_RADIUS * 2 + 6,
+                    BALL_RADIUS * 2 + 6
+            );
+        }
     }
 
     @Override
     public void renderExtraBalls(List<Ball> balls) {
         GraphicsContext graphics = canvas.getGraphicsContext2D();
-        graphics.setFill(Color.LIGHTSKYBLUE);
+        graphics.setFill(piercingBallActive ? Color.CYAN : Color.LIGHTSKYBLUE);
 
         for (Ball extraBall : balls) {
             graphics.fillOval(
@@ -333,6 +393,92 @@ public class GameView implements GameDisplay {
                     BALL_RADIUS * 2
             );
         }
+    }
+
+    @Override
+    public void setPiercingBallActive(boolean active) {
+        piercingBallActive = active;
+    }
+
+    @Override
+    public void resetPaddleSprite() {
+        selectedPaddleRow = spriteRandom.nextInt(6);
+        longPaddleSteps = 0;
+        speedPaddleUpgrade = false;
+    }
+
+    @Override
+    public void advanceLongPaddleSprite() {
+        longPaddleSteps = Math.min(1, longPaddleSteps + 1);
+    }
+
+    @Override
+    public void activateSpeedPaddleSprite() {
+        speedPaddleUpgrade = true;
+    }
+
+    @Override
+    public void showGameOverAnimation(Runnable onFinished) {
+        if (!isUsable(vausSheet)) {
+            onFinished.run();
+            return;
+        }
+        if (gameOverAnimation != null) {
+            gameOverAnimation.stop();
+        }
+
+        gameOverAnimation = new Timeline();
+        for (int frame = 0; frame < 12; frame++) {
+            final int currentFrame = frame;
+            gameOverAnimation.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(frame * 75),
+                    event -> drawGameOverFrame(currentFrame)
+            ));
+        }
+        gameOverAnimation.setOnFinished(event -> onFinished.run());
+        gameOverAnimation.playFromStart();
+    }
+
+    private void drawGameOverFrame(int frame) {
+        GraphicsContext graphics = canvas.getGraphicsContext2D();
+        double clearX = lastPaddleX - 20;
+        double clearY = PADDLE_Y - 16;
+        double clearWidth = lastPaddleWidth + 40;
+        double clearHeight = PADDLE_HEIGHT + 48;
+        drawFieldPatch(graphics, clearX, clearY, clearWidth, clearHeight);
+        int column = frame % 4;
+        int row = frame / 4;
+        graphics.drawImage(
+                vausSheet,
+                column * 32, 72 + row * 8, 32, 8,
+                lastPaddleX, PADDLE_Y,
+                lastPaddleWidth, PADDLE_HEIGHT
+        );
+    }
+
+    private void drawFieldPatch(
+            GraphicsContext graphics,
+            double destX,
+            double destY,
+            double destWidth,
+            double destHeight
+    ) {
+        if (!isUsable(fieldSheet)) {
+            graphics.setFill(Color.rgb(17, 24, 39));
+            graphics.fillRect(destX, destY, destWidth, destHeight);
+            return;
+        }
+        int backgroundIndex = Math.floorMod(currentStageNumber - 1, 9);
+        int column = backgroundIndex < 5 ? backgroundIndex : backgroundIndex - 5;
+        int row = backgroundIndex < 5 ? 0 : 1;
+        graphics.drawImage(
+                fieldSheet,
+                8 + column * 232 + destX * 208 / WIDTH,
+                8 + row * 256 + destY * 232 / HEIGHT,
+                destWidth * 208 / WIDTH,
+                destHeight * 232 / HEIGHT,
+                destX, destY, destWidth, destHeight
+        );
     }
 
     @Override
@@ -472,14 +618,20 @@ public class GameView implements GameDisplay {
 
     private void drawBackground() {
         GraphicsContext graphics = canvas.getGraphicsContext2D();
-        drawField(graphics);
+        drawField(graphics, 1);
     }
 
-    private void drawField(GraphicsContext graphics) {
+    private void drawField(GraphicsContext graphics, int stageNumber) {
         if (isUsable(fieldSheet)) {
+            int backgroundIndex = Math.floorMod(stageNumber - 1, 9);
+            int column = backgroundIndex < 5 ? backgroundIndex : backgroundIndex - 5;
+            int row = backgroundIndex < 5 ? 0 : 1;
             graphics.drawImage(
                     fieldSheet,
-                    8, 8, 208, 232,
+                    8 + column * 232,
+                    8 + row * 256,
+                    208,
+                    232,
                     0, 0, WIDTH, HEIGHT
             );
         } else {
@@ -490,30 +642,46 @@ public class GameView implements GameDisplay {
 
     private void drawBrick(
             GraphicsContext graphics,
-            Brick brick,
-            int index
+            Brick brick
     ) {
         double brickWidth = brick.getWidth() - 4;
         double brickHeight = brick.getHeight() - 4;
-        Color typeColor = Color.web(brick.getType().getColorHex());
 
         if (isUsable(blockSheet)) {
-            int columns = Math.max(
-                    1,
-                    (int) blockSheet.getWidth() / 16
-            );
-            int sourceX = (index % columns) * 16;
+            int sourceX;
+            int sourceY;
+            switch (brick.getType()) {
+                case NORMAL -> {
+                    sourceX = 16;
+                    sourceY = 8;
+                }
+                case STRONG -> {
+                    sourceX = 0;
+                    sourceY = brick.getHitPoints() == 1 ? 24 : 16;
+                }
+                case BONUS -> {
+                    sourceX = 48;
+                    sourceY = 8;
+                }
+                case SPECIAL -> {
+                    sourceX = 32;
+                    sourceY = 8;
+                }
+                default -> throw new IllegalStateException(
+                        "No block sprite is mapped for " + brick.getType()
+                );
+            }
 
             graphics.drawImage(
                     blockSheet,
-                    sourceX, 0, 16, 8,
+                    sourceX, sourceY, 16, 8,
                     brick.getX(),
                     brick.getY(),
                     brickWidth,
                     brickHeight
             );
         } else {
-            graphics.setFill(typeColor);
+            graphics.setFill(Color.web(brick.getType().getColorHex()));
             graphics.fillRoundRect(
                     brick.getX(),
                     brick.getY(),
@@ -524,21 +692,35 @@ public class GameView implements GameDisplay {
             );
         }
 
-        // แถบสีและตัวอักษรช่วยแยกชนิดของอิฐ
-        graphics.setFill(typeColor);
-        graphics.fillRect(
-                brick.getX(),
-                brick.getY(),
-                brickWidth,
-                4
-        );
+    }
 
-        graphics.setFill(Color.WHITE);
-        graphics.fillText(
-                brick.getType().getSymbol(),
-                brick.getX() + brickWidth / 2 - 4,
-                brick.getY() + brickHeight / 2 + 4
+    private static Image loadVausSheet(String path) {
+        Image source = loadImage(path);
+        if (!isUsable(source)) {
+            return source;
+        }
+
+        WritableImage keyedImage = new WritableImage(
+                (int) source.getWidth(),
+                (int) source.getHeight()
         );
+        var reader = source.getPixelReader();
+        var writer = keyedImage.getPixelWriter();
+        for (int y = 0; y < source.getHeight(); y++) {
+            for (int x = 0; x < source.getWidth(); x++) {
+                Color pixel = reader.getColor(x, y);
+                boolean greenScreen = pixel.getRed() < 0.05
+                        && pixel.getBlue() < 0.05
+                        && pixel.getGreen() > 0.2;
+                boolean printedText = y >= 48 && y < 72
+                        && pixel.getRed() > 0.8
+                        && pixel.getGreen() > 0.8
+                        && pixel.getBlue() < 0.1;
+                writer.setColor(x, y,
+                        greenScreen || printedText ? Color.TRANSPARENT : pixel);
+            }
+        }
+        return keyedImage;
     }
 
     private static Image loadImage(String path) {
