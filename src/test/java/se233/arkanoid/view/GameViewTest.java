@@ -3,8 +3,11 @@ package se233.arkanoid.view;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.image.WritableImage;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import org.junit.jupiter.api.Test;
 import se233.arkanoid.model.Ball;
 import se233.arkanoid.model.Boss;
@@ -18,6 +21,7 @@ import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -142,6 +146,39 @@ class GameViewTest {
     }
 
     @Test
+    void showGameOverAnimationClearsTheMovedAndResizedPaddleArea() throws Exception {
+        CountDownLatch completed = new CountDownLatch(1);
+        AtomicBoolean restoredBackground = new AtomicBoolean();
+        FxTestSupport.runAndWait(() -> {
+            GameView view = new GameView();
+            view.render(null, null, null, null, 0, 3, 1);
+            Canvas canvas = (Canvas) playArea(view).getChildren().get(0);
+            WritableImage background = canvas.snapshot(null, null);
+
+            Paddle paddle = new Paddle(100, 150, 420, GameView.WIDTH);
+            view.render(null, paddle, null, null, 0, 0, 1);
+            view.showGameOverAnimation(() -> {
+                WritableImage finished = canvas.snapshot(null, null);
+                boolean matches = true;
+                for (int y = 624; y < 688 && matches; y += 4) {
+                    for (int x = 80; x < 270; x += 5) {
+                        Color expected = background.getPixelReader().getColor(x, y);
+                        Color actual = finished.getPixelReader().getColor(x, y);
+                        if (colorDistance(expected, actual) > 0.04) {
+                            matches = false;
+                            break;
+                        }
+                    }
+                }
+                restoredBackground.set(matches);
+                completed.countDown();
+            });
+        });
+        assertTrue(completed.await(3, TimeUnit.SECONDS));
+        assertTrue(restoredBackground.get(), "The game-over frames should leave no paddle residue.");
+    }
+
+    @Test
     void showMenuAddsStartButtonAndInvokesItsAction() {
         FxTestSupport.runAndWait(() -> {
             GameView view = new GameView();
@@ -224,6 +261,12 @@ class GameViewTest {
 
     private static StackPane playArea(GameView view) {
         return (StackPane) view.getRoot().getCenter();
+    }
+
+    private static double colorDistance(Color first, Color second) {
+        return Math.abs(first.getRed() - second.getRed())
+                + Math.abs(first.getGreen() - second.getGreen())
+                + Math.abs(first.getBlue() - second.getBlue());
     }
 
     private static Button findButton(Node node, String prefix) {

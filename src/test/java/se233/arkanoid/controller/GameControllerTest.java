@@ -44,14 +44,15 @@ class GameControllerTest {
 
     @Test
     @Order(2)
-    void startMenuActionStartsANewRun() {
+    void startMenuActionStartsTheConfiguredBossTestRun() {
         Harness harness = new Harness(new Random(1));
 
         harness.display.startAction.run();
 
         assertEquals(GameState.PLAYING, harness.controller.getGame().getState());
         assertEquals(3, harness.controller.getGame().getLives());
-        assertEquals(26, harness.display.stage.getBricks().size());
+        assertEquals(5, harness.display.stageNumber);
+        assertTrue(harness.display.stage.getBricks().isEmpty());
     }
 
     @Test

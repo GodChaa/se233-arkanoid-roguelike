@@ -61,6 +61,10 @@ final class GameCanvasRenderer {
         GraphicsContext graphics = canvas.getGraphicsContext2D();
         currentLives = lives;
         currentStageNumber = stageNumber;
+        if (paddle != null) {
+            lastPaddleX = paddle.getX();
+            lastPaddleWidth = paddle.getWidth();
+        }
         drawField(graphics, stageNumber);
 
         if (stage != null) {
@@ -160,9 +164,22 @@ final class GameCanvasRenderer {
                     event -> drawGameOverFrame(currentFrame)
             ));
         }
-        gameOverAnimation.setOnFinished(event -> onFinished.run());
+        gameOverAnimation.setOnFinished(event -> {
+            clearGameOverSprite();
+            onFinished.run();
+        });
         gameOverAnimation.playFromStart();
     }
+
+    private void clearGameOverSprite() {
+        GraphicsContext graphics = canvas.getGraphicsContext2D();
+        drawFieldPatch(graphics,
+                lastPaddleX - 20,
+                PADDLE_Y - 16,
+                lastPaddleWidth + 40,
+                PADDLE_HEIGHT + 48);
+    }
+
 private void drawGameOverFrame(int frame) {
         GraphicsContext graphics = canvas.getGraphicsContext2D();
         double clearX = lastPaddleX - 20;
@@ -170,11 +187,10 @@ private void drawGameOverFrame(int frame) {
         double clearWidth = lastPaddleWidth + 40;
         double clearHeight = PADDLE_HEIGHT + 48;
         drawFieldPatch(graphics, clearX, clearY, clearWidth, clearHeight);
-        int column = frame % 4;
-        int row = frame / 4;
+        GameOverSpriteFrames sprite = GameOverSpriteFrames.frame(frame);
         graphics.drawImage(
                 vausSheet,
-                column * 32, 72 + row * 8, 32, 8,
+                sprite.x(), sprite.y(), sprite.width(), sprite.height(),
                 lastPaddleX, PADDLE_Y,
                 lastPaddleWidth, PADDLE_HEIGHT
         );
