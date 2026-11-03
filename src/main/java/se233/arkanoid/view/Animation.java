@@ -23,10 +23,6 @@ public final class Animation {
     private final boolean destroyed;
     private final Image[] impactFrames;
 
-    public Animation(long startedAtNanos, boolean destroyed) {
-        this(startedAtNanos, destroyed, null);
-    }
-
     public Animation(
             long startedAtNanos,
             boolean destroyed,

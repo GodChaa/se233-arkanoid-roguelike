@@ -13,7 +13,6 @@ import se233.arkanoid.model.Stage;
 import se233.arkanoid.model.Upgrade;
 import se233.arkanoid.model.UpgradeManager;
 import se233.arkanoid.view.GameView;
-import se233.arkanoid.view.GameDisplay;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -26,9 +25,9 @@ public class GameController {
     private static final double FIELD_HEIGHT = GameView.HEIGHT;
     private static final double BALL_RADIUS = GameView.BALL_RADIUS;
 
-    private final GameDisplay view;
+    private final GameView view;
     private final GameModel game;
-    private final GameEventLogger logger;
+    private final GameLogger logger;
     private final UpgradeManager upgrades;
     private final StageController stageController = new StageController();
     private Boss boss;
@@ -39,15 +38,15 @@ public class GameController {
     private boolean leftPressed;
     private boolean rightPressed;
 
-    public GameController(GameDisplay view) {
+    public GameController(GameView view) {
         this(view, new GameModel(), new GameLogger(), new Random());
     }
 
-    GameController(GameDisplay view, GameModel game, GameEventLogger logger, Random random) {
+    GameController(GameView view, GameModel game, GameLogger logger, Random random) {
         this(view, game, logger, new UpgradeManager(createUpgrades(), Objects.requireNonNull(random)));
     }
 
-    GameController(GameDisplay view, GameModel game, GameEventLogger logger, UpgradeManager upgrades) {
+    GameController(GameView view, GameModel game, GameLogger logger, UpgradeManager upgrades) {
         this.view = Objects.requireNonNull(view, "Display cannot be null.");
         this.game = Objects.requireNonNull(game, "Game model cannot be null.");
         this.logger = Objects.requireNonNull(logger, "Logger cannot be null.");

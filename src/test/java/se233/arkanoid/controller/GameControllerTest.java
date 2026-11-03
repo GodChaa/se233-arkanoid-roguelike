@@ -15,7 +15,7 @@ import se233.arkanoid.model.Paddle;
 import se233.arkanoid.model.Stage;
 import se233.arkanoid.model.Upgrade;
 import se233.arkanoid.model.UpgradeManager;
-import se233.arkanoid.view.GameDisplay;
+import se233.arkanoid.view.FxTestSupport;
 import se233.arkanoid.view.GameView;
 
 import java.util.ArrayList;
@@ -765,7 +765,7 @@ class GameControllerTest {
     }
 
     private static final class Harness {
-        private final RecordingDisplay display = new RecordingDisplay();
+        private final RecordingDisplay display = newRecordingDisplay();
         private final RecordingLogger logger = new RecordingLogger();
         private final GameController controller;
 
@@ -778,7 +778,13 @@ class GameControllerTest {
         }
     }
 
-    private static final class RecordingDisplay implements GameDisplay {
+    private static RecordingDisplay newRecordingDisplay() {
+        RecordingDisplay[] display = new RecordingDisplay[1];
+        FxTestSupport.runAndWait(() -> display[0] = new RecordingDisplay());
+        return display[0];
+    }
+
+    private static final class RecordingDisplay extends GameView {
         private Runnable startAction;
         private Runnable restartAction;
         private Consumer<Upgrade> upgradeAction;
@@ -831,18 +837,24 @@ class GameControllerTest {
             this.restartAction = restartAction;
         }
 
+        @Override public void showGameOverAnimation(Runnable onFinished) { onFinished.run(); }
+
         @Override public void hideOverlay() { }
 
         private void choose(Upgrade upgrade) { upgradeAction.accept(upgrade); }
         private void selectUpgrade(int index) { choose(upgradeChoices.get(index)); }
     }
 
-    private static final class RecordingLogger implements GameEventLogger {
+    private static final class RecordingLogger extends GameLogger {
         private final List<String> infos = new ArrayList<>();
         private final List<String> actions = new ArrayList<>();
         private final List<Integer> scores = new ArrayList<>();
         private final List<String> warnings = new ArrayList<>();
         private final List<String> errors = new ArrayList<>();
+
+        private RecordingLogger() {
+            super(org.apache.logging.log4j.LogManager.getLogger(RecordingLogger.class));
+        }
 
         @Override public void info(String message) { infos.add(message); }
         @Override public void action(String message) { actions.add(message); }

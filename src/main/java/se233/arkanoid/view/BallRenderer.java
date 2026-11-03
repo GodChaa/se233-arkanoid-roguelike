@@ -186,8 +186,6 @@ final class BallRenderer {
                 || effectsSheet.getImage().getHeight() < 64) {
             return new Image[0];
         }
-
-        // Animate through the eight round-ball frames, starting at frame two.
         Image[] frames = new Image[8];
         for (int frame = 0; frame < frames.length; frame++) {
             frames[frame] = effectsSheet.getSprite(

@@ -1,5 +1,6 @@
 package se233.arkanoid.controller;
 
+import org.apache.logging.log4j.LogManager;
 import org.junit.jupiter.api.Test;
 import se233.arkanoid.view.FxTestSupport;
 import se233.arkanoid.model.Ball;
@@ -9,7 +10,8 @@ import se233.arkanoid.model.GameModel;
 import se233.arkanoid.model.Paddle;
 import se233.arkanoid.model.Stage;
 import se233.arkanoid.model.Upgrade;
-import se233.arkanoid.view.GameDisplay;
+import se233.arkanoid.view.FxTestSupport;
+import se233.arkanoid.view.GameView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,7 +61,7 @@ class GameLoopTest {
         private final List<Double> elapsed = new ArrayList<>();
 
         private CountingController() {
-            super(new EmptyDisplay(), new GameModel(), new EmptyLogger(), new Random(1));
+            super(createEmptyDisplay(), new GameModel(), new EmptyLogger(), new Random(1));
         }
 
         @Override
@@ -68,21 +70,26 @@ class GameLoopTest {
         }
     }
 
-    private static final class EmptyDisplay implements GameDisplay {
+    private static EmptyDisplay createEmptyDisplay() {
+        EmptyDisplay[] display = new EmptyDisplay[1];
+        FxTestSupport.runAndWait(() -> display[0] = new EmptyDisplay());
+        return display[0];
+    }
+
+    private static final class EmptyDisplay extends GameView {
         @Override public void showMenu(Runnable startAction) { }
         @Override public void render(Ball ball, Paddle paddle, Stage stage, Boss boss,
                                      int score, int lives, int stageNumber) { }
         @Override public void showUpgradeChoices(List<Upgrade> choices, Consumer<Upgrade> onSelect) { }
         @Override public void showEnd(String title, String detail, Runnable restartAction) { }
         @Override public void showError(String detail, Runnable restartAction) { }
+        @Override public void showGameOverAnimation(Runnable onFinished) { onFinished.run(); }
         @Override public void hideOverlay() { }
     }
 
-    private static final class EmptyLogger implements GameEventLogger {
-        @Override public void info(String message) { }
-        @Override public void action(String message) { }
-        @Override public void score(int score) { }
-        @Override public void warning(String message) { }
-        @Override public void error(String message, Throwable cause) { }
+    private static final class EmptyLogger extends GameLogger {
+        private EmptyLogger() {
+            super(LogManager.getLogger(EmptyLogger.class));
+        }
     }
 }
